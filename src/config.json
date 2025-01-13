@@ -8,6 +8,9 @@
 		"term%.%w+"
 	],
 	"settings": {
-		
+		"Lua.runtime.builtin": {
+			"io": "disable",
+			"os": "disable"
+		}
 	}
 }
