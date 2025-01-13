@@ -36,7 +36,6 @@ colors = {
 	black 		= 32768		---@type colors.color
 }
 
-
 ---Combines a set of colors (or sets of colors) into a larger set. Useful for Bundled Cables.
 ---@param ... colors.color The colors to combine.
 ---@return colors.colorSet set The union of the color sets given in `...`
