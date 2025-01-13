@@ -7,3 +7,6 @@ You will need the [Lua Language Server vscode extension by sumneko](https://mark
 
 After installing the extension you will need to go into the extension's settings and add the path to the workspace into `workspace.library`.
 ![extensionSettings](images/settings.png)
+
+It is also recommended that you disable the built-in `io` and `os` globals.
+![disableSettings](images/builtin.png)
