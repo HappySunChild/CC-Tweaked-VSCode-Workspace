@@ -63,7 +63,7 @@ function textutils.pagedTabulate(...) end
 
 ---Convert a Lua object into a textual representation, suitable for saving in a file or pretty-printing.
 ---@param obj any The object to serialize.
----@param options textutils.serializeOptions Options for serialization.
+---@param options? textutils.serializeOptions Options for serialization.
 ---@return string serialized The serialized representation.
 function textutils.serialize(obj, options) end
 
@@ -79,14 +79,14 @@ function textutils.unserialize(serialized) end
 ---This is largely intended for interacting with various functions from the `commands` API,
 ---though may also be used in making `http` requests.
 ---@param obj any The value to serialize.
----@param options boolean|textutils.jsonSerializeOptions Options for serialization, or `true` for NBT-style JSON (non-quoted keys) instead of standard JSON.
+---@param options? boolean|textutils.jsonSerializeOptions Options for serialization, or `true` for NBT-style JSON (non-quoted keys) instead of standard JSON.
 ---@return string serialized The serialized object.
 function textutils.serializeJSON(obj, options) end
 
 
 ---Converts a serialised JSON string back into a reassembled Lua object.
 ---@param serialized string The serialised string to deserialise.
----@param options textutils.jsonUnserializeOptions Options which control how this JSON object is parsed.
+---@param options? textutils.jsonUnserializeOptions Options which control how this JSON object is parsed.
 ---@return any? deserialized The deserialised object, or `nil` if the object could not be deserialized.
 ---@return string reason A message describing why the JSON string is invalid.
 function textutils.unserializeJSON(serialized, options) end
