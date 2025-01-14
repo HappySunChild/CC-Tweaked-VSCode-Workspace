@@ -1,5 +1,5 @@
 # CC:Tweaked VSCode Workspace
- A typed workspace for CC:Tweaked ~~and Plethora~~ made for the Lua Language Server VS Code extension by sumneko.
+ A typed workspace for CC:Tweaked ~~and Plethora~~.
 
 ## How To Use
 You will need the [Lua Language Server vscode extension by sumneko](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) for this workspace to work.
