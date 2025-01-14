@@ -4,7 +4,6 @@
 ---that function arguments are well-formed and of the correct type.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/library/cc.expect.html">Official Documentation</a></h2>
----@class cc.expect
 local expect = {}
 
 
@@ -31,3 +30,5 @@ function expect.field(tbl, index, ...) end
 ---@param max? number 	The maximum value, is `math.huge` by default.
 ---@return number num 	The given `num`.
 function expect.range(num, min, max) end
+
+return expect

@@ -15,7 +15,6 @@
 ---
 ---The structure of this module is based on [*A Prettier Printer*](https://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf).
 ---<h2 align="center"><a href="https://tweaked.cc/library/cc.pretty.html">Official Documentation</a></h2>
----@class cc.pretty
 local pretty = {}
 
 
@@ -124,3 +123,5 @@ function pretty.pretty(obj, options) end
 ---@param options? cc.pretty.prettyOptions 	Controls how various properties are displayed.
 ---@param ribbon_frac? number 				The maximum fraction of the width that we should write in, is 0.6 by default.
 function pretty.pretty_print(obj, options, ribbon_frac) end
+
+return pretty

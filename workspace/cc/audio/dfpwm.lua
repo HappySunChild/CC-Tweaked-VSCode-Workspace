@@ -15,7 +15,6 @@
 ---[FFmpeg](https://ffmpeg.org/) 5.1 or later.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/library/cc.audio.dfpwm.html">Official Documentation</a></h2>
----@class cc.audio.dfpwm
 local dfpwm = {}
 
 
@@ -60,3 +59,5 @@ function dfpwm.encode(pcm) end
 ---@param input string The DFPWM data to convert.
 ---@return number[] pcm The produced amplitude data.
 function dfpwm.decode(input) end
+
+return dfpwm
