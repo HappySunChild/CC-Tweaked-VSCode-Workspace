@@ -4,9 +4,9 @@
 ---with Bundled Cables from mods like Project Red, and colors on
 ---Advanced Computers and Advanced Monitors.
 ---
----For the non-American English version just replace colors with colors.
+---For the non-American English version just replace `colors` with `colours`.
 ---This alternative API is exactly the same, except the colors use
----British English (e.g. colors.gray is spelt colors.grey).
+---British English (e.g. `colors.gray` is spelt `colors.grey`).
 ---
 ---On basic terminals, all the colors are converted to grayscale. This
 ---means you can still use all 16 colors on the screen, but they will
