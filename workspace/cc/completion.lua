@@ -4,7 +4,6 @@
 ---such as that require by `_G.read`.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/library/cc.completion.html">Official Documentation</a></h2>
----@class cc.completion
 local completion = {}
 
 
@@ -42,3 +41,5 @@ function completion.setting(text, add_space) end
 ---@param add_space? boolean Whether to add a space after the completed name.
 ---@return string[] matches A list of suffixes of matching strings.
 function completion.command(text, add_space) end
+
+return completion
