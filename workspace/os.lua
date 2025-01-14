@@ -18,8 +18,8 @@ os.computerLabel = os.getComputerLabel
 ---
 ---Unlike `os.pullEventRaw`, it will stop the application upon a "terminate"
 ---event, printing the error "Terminated".
----@param filter? string Event to filter for.
----@return string event The name of the event that fired.
+---@param filter? string|os.event Event to filter for.
+---@return string|os.event event The name of the event that fired.
 ---@return any ... Optional additional parameters of the event.
 function os.pullEvent(filter) end
 
@@ -31,8 +31,8 @@ function os.pullEvent(filter) end
 ---This behaves almost the same as `os.pullEvent`, except it allows
 ---you to handle the terminate event yourself - the program will
 ---not stop execution when Ctrl+T is pressed.
----@param filter? string Event to filter for.
----@return string event The name of the event that fired.
+---@param filter? string|os.rawEvent Event to filter for.
+---@return string|os.rawEvent event The name of the event that fired.
 ---@return any ... Optional additional parameters of the event.
 function os.pullEventRaw(filter) end
 
