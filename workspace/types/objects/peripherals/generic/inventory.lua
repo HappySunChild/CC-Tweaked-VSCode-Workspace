@@ -47,7 +47,7 @@ function Inventory.pushItems(toName, fromSlot, limit, toSlot) end
 ---**Both inventories must be attached to wired modems which are connected via a cable.**
 ---@param fromName string The name of the peripheral/inventory to push to. This is the string given to `peripheral.wrap`, and displayed by the wired modem.
 ---@param fromSlot integer The slot in the source inventory to move items from.
----@param limit integer The maximum number of items to move. Defaults to the current stack limit.
----@param toSlot integer The slot in current inventory to move to. If not given, the item will be inserted into any slot.
+---@param limit? integer The maximum number of items to move. Defaults to the current stack limit.
+---@param toSlot? integer The slot in current inventory to move to. If not given, the item will be inserted into any slot.
 ---@return integer transferred The number of transferred items.
 function Inventory.pullItems(fromName, fromSlot, limit, toSlot) end

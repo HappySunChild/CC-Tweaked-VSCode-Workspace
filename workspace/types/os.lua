@@ -17,7 +17,7 @@
 ---@field isdst boolean
 
 ---@alias os.event
----| '"alaram"'
+---| '"alarm"'
 ---| '"char"'
 ---| '"computer_command"'
 ---| '"disk"'

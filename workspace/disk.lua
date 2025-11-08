@@ -17,7 +17,6 @@ disk = {}
 ---@return boolean present If something is in the disk drive.
 function disk.isPresent(name) end
 
-
 ---Get the label of the floppy disk, record, or other media within the given disk drive.
 ---If there is a computer or turtle within the drive, this will set the label as read by `os.getComputerLabel`.
 ---@param name string The name of the disk drive.
