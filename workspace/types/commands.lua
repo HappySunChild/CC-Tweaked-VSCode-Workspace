@@ -1,4 +1,4 @@
 ---@meta
 
----@class commands.blockInfo: turtle.blockInfo
+---@class commands.BlockInfo: turtle.BlockInfo
 ---@field nbt? table<string, any>

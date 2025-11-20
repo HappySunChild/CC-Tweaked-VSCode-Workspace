@@ -17,19 +17,14 @@
 ---<h2 align="center"><a href="https://tweaked.cc/library/cc.pretty.html">Official Documentation</a></h2>
 local pretty = {}
 
-
-
 ---A document containing formatted text, with multiple possible layouts.
 ---@class cc.pretty.Doc
 ---@operator concat(string|cc.pretty.Doc):cc.pretty.Doc
-
 
 ---Controls how various properties are displayed.
 ---@class cc.pretty.prettyOptions
 ---@field function_args? boolean 			Show the arguments to a function if known (`false` by default).
 ---@field function_source? boolean 			Show where the function was defined, instead of `function: xxxxxxxx` (`false` by default).
-
-
 
 ---An empty document.
 ---@type cc.pretty.Doc
@@ -47,23 +42,19 @@ pretty.line = nil
 ---@type cc.pretty.Doc
 pretty.space_line = nil
 
-
-
 ---Create a new document from a string.
 ---
 ---If your string contains multiple lines, group will flatten the string into a single line, with spaces between each line.
 ---@param text string 						The string to construct a new document with.
----@param color? colors.color 				The color this text should be printed with. If not given, we default to the current color.
+---@param color? integer 				The color this text should be printed with. If not given, we default to the current color.
 ---@return cc.pretty.Doc doc 				The document with the provided text.
 function pretty.text(text, color) end
-
 
 ---Concatenate several documents together.
 ---This behaves very similar to string concatenation.
 ---@param ... cc.pretty.Doc|string 			The documents to concatenate.
 ---@return cc.pretty.Doc doc 				The concatenated documents.
 function pretty.concat(...) end
-
 
 ---Indent later lines of the given document with the given number of spaces.
 ---
@@ -82,24 +73,20 @@ function pretty.concat(...) end
 ---@return cc.pretty.Doc doc 				The nested document.
 function pretty.nest(depth, doc) end
 
-
 ---Builds a document which is displayed on a single line if there is enough room, or as normal if not.
 ---@param doc cc.pretty.Doc 				The document to group.
 ---@return cc.pretty.Doc doc 				The grouped document.
 function pretty.group(doc) end
-
 
 ---Display a document on the terminal.
 ---@param doc cc.pretty.Doc 				The document to render
 ---@param ribbon_frac? number 				The maximum fraction of the width that we should write in, is 0.6 by default.
 function pretty.write(doc, ribbon_frac) end
 
-
 ---Display a document on the terminal with a trailing new line.
 ---@param doc cc.pretty.Doc 				The document to render.
 ---@param ribbon_frac? number 				The maximum fraction of the width that we should write in, is 0.6 by default.
 function pretty.print(doc, ribbon_frac) end
-
 
 ---Render a document, converting it into a string.
 ---@param doc cc.pretty.Doc 				The document to render.
@@ -108,7 +95,6 @@ function pretty.print(doc, ribbon_frac) end
 ---@return string rendered 					The rendered document as a string.
 function pretty.render(doc, width, ribbon_frac) end
 
-
 ---Pretty-print an arbitrary object, converting it into a document.
 ---
 ---This can then be rendered with write or print.
@@ -116,7 +102,6 @@ function pretty.render(doc, width, ribbon_frac) end
 ---@param options? cc.pretty.prettyOptions 	Controls how various properties are displayed.
 ---@return cc.pretty.Doc doc 				The object formatted as a document.
 function pretty.pretty(obj, options) end
-
 
 ---A shortcut for calling `pretty` and `print` together.
 ---@param obj any 							The object to pretty-print.

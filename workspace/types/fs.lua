@@ -1,8 +1,6 @@
 ---@meta
 
----@alias fs.FileHandle fs.WriteHandle|fs.ReadHandle
-
----@alias fs.fileMode
+---@alias fs.FileMode
 ---| '"r"'
 ---| '"w"'
 ---| '"a"'
@@ -10,12 +8,12 @@
 ---| '"wb"'
 ---| '"ab"'
 
----@alias fs.seekWhence
+---@alias fs.SeekWhence
 ---| '"set"'
 ---| '"cur"'
 ---| '"end"'
 
----@class fs.attributes
+---@class fs.Attributes
 ---@field size integer
 ---@field isDir boolean
 ---@field isReadOnly boolean

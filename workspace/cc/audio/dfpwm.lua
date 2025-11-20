@@ -17,7 +17,6 @@
 ---<h2 align="center"><a href="https://tweaked.cc/library/cc.audio.dfpwm.html">Official Documentation</a></h2>
 local dfpwm = {}
 
-
 ---Create a new encoder for converting PCM audio data into DFPWM.
 ---
 ---The returned encoder is itself a function. This function accepts a
@@ -28,7 +27,6 @@ local dfpwm = {}
 ---stream, the resulting audio may not sound correct.
 ---@return fun(pcm: number[]): string encoder The encoder function.
 function dfpwm.make_encoder() end
-
 
 ---Create a new decoder for converting DFPWM into PCM audio data.
 ---
@@ -41,7 +39,6 @@ function dfpwm.make_encoder() end
 ---@return fun(dfpwm: string): number[] decoder The decoder function.
 function dfpwm.make_decoder() end
 
-
 ---A convenience function for encoding a complete file of audio at once.
 ---
 ---This should only be used for complete pieces of audio. If you are writing
@@ -50,7 +47,6 @@ function dfpwm.make_decoder() end
 ---@param pcm number[] The table of amplitude data.
 ---@return string encoded The encoded DFPWM data.
 function dfpwm.encode(pcm) end
-
 
 ---A convenience function for decoding a complete file of audio at once.
 ---

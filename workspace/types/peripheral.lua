@@ -1,11 +1,11 @@
 ---@meta
 
----@class peripheral.inventoryItem
+---@class peripheral.InventoryItem
 ---@field name string
 ---@field count integer
 ---@field nbt string?
 
----@class peripheral.detailedInventoryItem : peripheral.inventoryItem
+---@class peripheral.DetailedInventoryItem : peripheral.InventoryItem
 ---@field displayName string
 ---@field maxCount integer
 ---@field tags? table<string, true>
@@ -13,11 +13,11 @@
 ---@field maxDamage? integer
 ---@field durability? integer
 
----@class peripheral.fluidTankInfo
+---@class peripheral.FluidTankInfo
 ---@field amount integer
 ---@field name string
 
----@alias peripheral.speaker.instrument
+---@alias peripheral.Speaker.Instrument
 ---| '"harp"'
 ---| '"basedrum"'
 ---| '"snare"'
@@ -35,7 +35,7 @@
 ---| '"banjo"'
 ---| '"pling"'
 
----@alias peripheral.side
+---@alias peripheral.Side
 ---| '"top"'
 ---| '"bottom"'
 ---| '"left"'
@@ -43,4 +43,4 @@
 ---| '"front"'
 ---| '"back"'
 
----@alias peripheral.wrappedPeripheral any
+---@alias peripheral.WrappedPeripheral any

@@ -1,10 +1,10 @@
 ---@meta
 
----@alias turtle.side
+---@alias turtle.Side
 ---| '"left"'
 ---| '"right"'
 
----@class turtle.blockInfo
+---@class turtle.BlockInfo
 ---@field name string
 ---@field state table<string, any>
 ---@field tags table<string, true>

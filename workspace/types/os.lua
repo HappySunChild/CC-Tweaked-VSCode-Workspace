@@ -1,11 +1,11 @@
 ---@meta
 
----@alias os.locale
+---@alias os.Locale
 ---| '"ingame"'
 ---| '"utc"'
 ---| '"local"'
 
----@class os.timestampTable
+---@class os.TimestampTable
 ---@field sec integer
 ---@field min integer
 ---@field hour integer
@@ -16,7 +16,7 @@
 ---@field yday integer
 ---@field isdst boolean
 
----@alias os.event
+---@alias os.Event
 ---| '"alarm"'
 ---| '"char"'
 ---| '"computer_command"'
@@ -50,5 +50,5 @@
 ---| '"websocket_message"'
 ---| '"websocket_success"'
 
----@alias os.rawEvent os.event
+---@alias os.RawEvent os.Event
 ---|'"terminate"'

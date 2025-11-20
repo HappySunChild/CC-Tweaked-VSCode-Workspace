@@ -1,6 +1,6 @@
 ---@meta
 
----@alias io.readFormat
+---@alias io.ReadFormat
 ---| '"l"'
 ---| '"L"'
 ---| '"a"'

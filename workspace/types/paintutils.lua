@@ -1,3 +1,3 @@
 ---@meta
 
----@alias paintuils.parsedImage number[][]
+---@alias paintuils.ParsedImage number[][]

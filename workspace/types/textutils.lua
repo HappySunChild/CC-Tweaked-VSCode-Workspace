@@ -1,18 +1,18 @@
 ---@meta
 
----@class textutils.emptyJsonArray
----@class textutils.jsonNull
+---@class textutils.EmptyJsonArray
+---@class textutils.JsonNull
 
----@class textutils.serializeOptions
+---@class textutils.SerializeOptions
 ---@field compact? boolean
 ---@field allow_repetitions? boolean
 
----@class textutils.jsonSerializeOptions
+---@class textutils.JsonSerializeOptions
 ---@field nbt_style? boolean
 ---@field unicode_strings? boolean
 ---@field allow_repetitions? boolean
 
----@class textutils.jsonUnserializeOptions
+---@class textutils.JsonUnserializeOptions
 ---@field nbt_stlye? boolean
 ---@field parse_null? boolean
 ---@field parse_empty_array? boolean
