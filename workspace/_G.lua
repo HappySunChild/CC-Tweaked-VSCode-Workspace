@@ -1,5 +1,33 @@
 ---@meta
 
+-- Global Libraries
+
+colors = nil ---@type colorslib
+colours = nil ---@type colourslib
+commands = nil ---@type commandslib
+disk = nil ---@type disklib
+fs = nil ---@type fslib
+gps = nil ---@type gpslib
+help = nil ---@type helplib
+http = nil ---@type httplib
+io = nil ---@type iolib
+keys = nil ---@type keyslib
+multishell = nil ---@type multishelllib
+os = nil ---@type oslib
+paintutils = nil ---@type paintutilslib
+parallel = nil ---@type parallellib
+peripheral = nil ---@type peripherallib
+pocket = nil ---@type pocketlib
+rednet = nil ---@type rednetlib
+redstone = nil ---@type redstonelib
+settings = nil ---@type settingslib
+shell = nil ---@type shelllib
+term = nil ---@type termlib
+textutils = nil ---@type textutilslib
+turtle = nil ---@type turtlelib
+vector = nil ---@type vectorlib
+window = nil ---@type windowlib
+
 ---Stores the current ComputerCraft and Minecraft versions.
 ---@type string
 _HOST = nil

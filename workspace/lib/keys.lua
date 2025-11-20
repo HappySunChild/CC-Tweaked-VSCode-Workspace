@@ -7,8 +7,8 @@
 ---rather than the underlying numerical values.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/keys.html">Official Documentation</a></h2>
----@class keys
-keys = {
+---@class keyslib
+local keys = {
 	space = 32,
 	apostrophe = 39,
 	comma = 44,
@@ -124,9 +124,9 @@ keys = {
 	rightCtrl = 345,
 	rightAlt = 346,
 	menu = 348,
-}
 
----Translates a numerical key code to a human-readable name. The human-readable name is one of the constants in the keys API.
----@param code number The key code to look up.
----@return string? name The name of the key, or nil if not a valid key code.
-function keys.getName(code) end
+	---Translates a numerical key code to a human-readable name. The human-readable name is one of the constants in the keys API.
+	---@param code number The key code to look up.
+	---@return string? name The name of the key, or nil if not a valid key code.
+	getName = function(code) end,
+}

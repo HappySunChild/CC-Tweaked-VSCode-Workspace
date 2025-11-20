@@ -13,17 +13,17 @@
 ---```
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/pocket.html">Official Documentation</a></h2>
----@class pocket
-pocket = {}
+---@class pocketlib
+local pocket = {
+	---Search the player's inventory for another upgrade, replacing the existing one with that item if found.
+	---
+	---This inventory search starts from the player's currently selected slot, allowing you to prioritise upgrades.
+	---@return boolean equipped If an item was equipped.
+	---@return string reason The reason an item was not equipped.
+	equipBack = function() end,
 
----Search the player's inventory for another upgrade, replacing the existing one with that item if found.
----
----This inventory search starts from the player's currently selected slot, allowing you to prioritise upgrades.
----@return boolean equipped If an item was equipped.
----@return string reason The reason an item was not equipped.
-function pocket.equipBack() end
-
----Remove the pocket computer's current upgrade.
----@return boolean equipped If the upgrade was unequipped.
----@return string reason The reason an upgrade was not unequipped.
-function pocket.unequipBack() end
+	---Remove the pocket computer's current upgrade.
+	---@return boolean equipped If the upgrade was unequipped.
+	---@return string reason The reason an upgrade was not unequipped.
+	unequipBack = function() end,
+}

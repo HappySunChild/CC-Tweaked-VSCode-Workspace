@@ -13,14 +13,16 @@
 ---You may choose which axes `x`, `y`, or `z` refer to.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/gps.html">Official Documentation</a></h2>
----@class gps
-gps = {}
-gps.CHANNEL_GPS = 65534
+---@class gpslib
+local gps = {
+	---The channel which GPS requests and responses are broadcast on.
+	CHANNEL_GPS = 65534,
 
----Tries to retrieve the computer or turtles own location.
----@param timeout? number The maximum time in seconds taken to establish our position.
----@param debug? boolean Print debugging messages.
----@return number x This computer's `x` position.
----@return number y This computer's `y` position.
----@return number z This computer's `z` position.
-function gps.locate(timeout, debug) end
+	---Tries to retrieve the computer or turtles own location.
+	---@param timeout? number The maximum time in seconds taken to establish our position.
+	---@param debug? boolean Print debugging messages.
+	---@return number x This computer's `x` position.
+	---@return number y This computer's `y` position.
+	---@return number z This computer's `z` position.
+	locate = function(timeout, debug) end,
+}
