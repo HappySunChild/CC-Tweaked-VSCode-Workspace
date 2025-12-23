@@ -10,9 +10,9 @@
 ---| '"CROSS_SIGNAL"'
 
 ---@alias create.train.InstructionId
----| '"create:destination"'
----| '"create:rename"'
----| '"create:throttle"'
+---| '"create:destination"' Move to a certain train station. This instruction requires at least `1` condition.
+---| '"create:rename"' Change the schedule title. This instruction cannot have conditions.
+---| '"create:throttle"' Change the train's throttle. This instruction cannot have conditions.
 
 ---@alias create.train.ConditionId
 ---| '"create:delay"' Wait for a set delay. Can be measured in ticks, seconds or minutes.
@@ -35,7 +35,7 @@
 
 ---@class create.train.ScheduleEntry
 ---@field instruction create.train.ScheduleInstruction
----@field conditions create.train.ScheduleCondition[][]
+---@field conditions? create.train.ScheduleCondition[][]
 
 ---@class create.train.Schedule
 ---@field cyclic boolean
