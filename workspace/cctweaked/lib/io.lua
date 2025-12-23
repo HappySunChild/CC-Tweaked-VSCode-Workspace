@@ -1,5 +1,10 @@
 ---@meta
 
+---@alias io.ReadFormat
+---| '"l"'
+---| '"L"'
+---| '"a"'
+
 ---Emulates Lua's standard io library.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/io.html">Official Documentation</a></h2>

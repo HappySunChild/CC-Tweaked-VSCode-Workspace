@@ -7,6 +7,9 @@
 ---@class vectorlib
 local vector = {
 	---Construct a new `Vector` with the given coordinates.
+	---@param x number
+	---@param y number
+	---@param z number
 	---@return vector.Vector vector The constructed vector.
 	new = function(x, y, z) end,
 }

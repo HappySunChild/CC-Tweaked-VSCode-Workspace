@@ -1,5 +1,7 @@
 ---@meta
 
+---@alias paintuils.ParsedImage number[][]
+
 ---Utilities for drawing more complex graphics, such as pixels, lines and images.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/paintutils.html">Official Documentation</a></h2>

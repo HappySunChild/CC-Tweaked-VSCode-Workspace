@@ -6,17 +6,17 @@
 ---
 ---This API is not the same as the commands API, which is exposed on command computers.
 ---@class peripheral.CommandBlock
-local CommandBlock = {}
+local CommandBlock = {
+	---Get the command this command block will run.
+	---@return string command The current command.
+	getCommand = function() end,
 
----Get the command this command block will run.
----@return string command The current command.
-function CommandBlock.getCommand() end
+	---Set the command block's command.
+	---@param command string The new command.
+	setCommand = function(command) end,
 
----Set the command block's command.
----@param command string The new command.
-function CommandBlock.setCommand(command) end
-
----Execute the command block once.
----@return boolean success If the command completed successfully.
----@return string reason A failure message.
-function CommandBlock.runCommand() end
+	---Execute the command block once.
+	---@return boolean success If the command completed successfully.
+	---@return string reason A failure message.
+	runCommand = function() end,
+}

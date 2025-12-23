@@ -1,5 +1,10 @@
 ---@meta
 
+---@class settings.SettingDetails
+---@field description? string
+---@field default? any
+---@field type? string
+
 ---Read and write configuration options for CraftOS and your programs.
 ---
 ---When a computer starts, it reads the current value of settings from the /.settings file.

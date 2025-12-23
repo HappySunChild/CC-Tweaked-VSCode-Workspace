@@ -1,5 +1,14 @@
 ---@meta
 
+---@alias turtle.Side
+---| '"left"'
+---| '"right"'
+
+---@class turtle.BlockInfo
+---@field name string
+---@field state table<string, any>
+---@field tags table<string, true>
+
 ---Turtles are a robotic device, which can break and place blocks,
 ---attack mobs, and move about the world. They have an internal
 ---inventory of 16 slots, allowing them to store blocks they have
@@ -8,6 +17,14 @@
 ---<h2 align="center"><a href="https://tweaked.cc/modules/turtle.html">Official Documentation</a></h2>
 ---@class turtlelib
 local turtle = {
+	---The builtin turtle API, without any generated helper functions.
+	---
+	---Historically this table behaved differently to the main turtle API,
+	---but this is no longer the case. You should not need to use it.
+	---@deprecated
+	---@type turtlelib
+	native = turtle,
+
 	---Craft a recipe based on the turtle's inventory.
 	---The turtle's inventory should set up like a crafting grid.
 	---For instance, to craft sticks, slots 1 and 5 should contain planks.
@@ -247,22 +264,15 @@ local turtle = {
 	---@return boolean exists Whether there is a block in front of the turtle.
 	---@return turtle.BlockInfo|string info Information about the block in front, or a message explaining that there is no block.
 	inspectDown = function() end,
+
+	---Get detailed information about the items in the given slot.
+	---@param slot? number The slot to get information about. Defaults to the selected slot.
+	---@return peripheral.InventoryItem? info Information about the given slot, or nil if it is empty.
+	getItemDetail = function(slot) end,
+
+	---Get detailed information about the items in the given slot.
+	---@param slot? number The slot to get information about. Defaults to the selected slot.
+	---@param detailed boolean Whether to include "detailed" information. When `true` the method will contain much more information about the item at the cost of taking longer to run.
+	---@return peripheral.DetailedInventoryItem? info Information about the given slot, or nil if it is empty.
+	getItemDetail = function(slot, detailed) end,
 }
-
----The builtin turtle API, without any generated helper functions.
----
----Historically this table behaved differently to the main turtle API,
----but this is no longer the case. You should not need to use it.
----@deprecated
-turtle.native = turtle
-
----Get detailed information about the items in the given slot.
----@param slot? number The slot to get information about. Defaults to the selected slot.
----@return peripheral.InventoryItem? info Information about the given slot, or nil if it is empty.
-turtle.getItemDetail = function(slot) end
-
----Get detailed information about the items in the given slot.
----@param slot? number The slot to get information about. Defaults to the selected slot.
----@param detailed boolean Whether to include "detailed" information. When `true` the method will contain much more information about the item at the cost of taking longer to run.
----@return peripheral.DetailedInventoryItem? info Information about the given slot, or nil if it is empty.
-turtle.getItemDetail = function(slot, detailed) end

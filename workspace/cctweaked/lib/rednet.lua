@@ -1,5 +1,7 @@
 ---@meta
 
+---@alias rednet.Transmittable string | boolean | number | table
+
 ---Communicate with other computers by using modems.
 ---rednet provides a layer of abstraction on top of the main modem peripheral,
 ---making it slightly easier to use.

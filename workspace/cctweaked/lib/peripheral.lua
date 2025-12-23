@@ -1,5 +1,32 @@
 ---@meta
 
+---@class peripheral.InventoryItem
+---@field name string
+---@field count integer
+---@field nbt string?
+
+---@class peripheral.DetailedInventoryItem : peripheral.InventoryItem
+---@field displayName string
+---@field maxCount integer
+---@field tags? table<string, true>
+---@field damage? integer
+---@field maxDamage? integer
+---@field durability? integer
+
+---@class peripheral.FluidTankInfo
+---@field amount integer
+---@field name string
+
+---@alias peripheral.Side
+---| '"top"'
+---| '"bottom"'
+---| '"left"'
+---| '"right"'
+---| '"front"'
+---| '"back"'
+
+---@alias peripheral.WrappedPeripheral any
+
 ---Find and control peripherals attached to this computer.
 ---
 ---Peripherals are blocks (or turtle and pocket computer upgrades) which can be
@@ -9,7 +36,6 @@
 ---<h2 align="center"><a href="https://tweaked.cc/module/peripheral.html">Official Documentation</a></h2>
 ---@class peripherallib
 local peripheral = {
-
 	---Provides a list of all peripherals available.
 	---
 	---If a device is located directly next to the system, then its name will be

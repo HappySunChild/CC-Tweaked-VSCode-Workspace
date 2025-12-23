@@ -1,5 +1,8 @@
 ---@meta
 
+---@class commands.BlockInfo: turtle.BlockInfo
+---@field nbt? table<string, any>
+
 ---Execute [Minecraft commands](https://minecraft.wiki/w/Commands)
 ---using a command computer
 ---
