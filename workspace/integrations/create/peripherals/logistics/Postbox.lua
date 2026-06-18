@@ -22,10 +22,10 @@ local Postbox = {
 
 	---Get detailed information about an item in the Postbox's inventory.
 	---@param slot integer
-	---@return peripheral.InventoryItem?
+	---@return cc.peripheral.InventoryItem?
 	getItemDetail = function(slot) end,
 
 	---List all items in the Postbox's inventory. This returns a table, with an entry for each slot.
-	---@return peripheral.InventoryItem[]
+	---@return cc.peripheral.InventoryItem[]
 	list = function() end,
 }
