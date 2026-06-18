@@ -1,11 +1,11 @@
 ---@meta
 
----@alias os.Locale
+---@alias cc.os.Locale
 ---| '"ingame"'
 ---| '"utc"'
 ---| '"local"'
 
----@class os.TimestampTable
+---@class cc.os.TimestampTable
 ---@field sec integer
 ---@field min integer
 ---@field hour integer
@@ -16,7 +16,7 @@
 ---@field yday integer
 ---@field isdst boolean
 
----@alias os.Event
+---@alias cc.os.Event
 ---| '"alarm"'
 ---| '"char"'
 ---| '"computer_command"'
@@ -50,13 +50,13 @@
 ---| '"websocket_message"'
 ---| '"websocket_success"'
 
----@alias os.RawEvent os.Event
+---@alias cc.os.RawEvent cc.os.Event
 ---|'"terminate"'
 
 ---The os API allows interacting with the current computer.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/os.html">Official Documentation</a></h2>
----@class oslib
+---@class cc.oslib
 local os = {
 	sleep = sleep,
 
@@ -86,8 +86,8 @@ local os = {
 	---
 	---Unlike `os.pullEventRaw`, it will stop the application upon a "terminate"
 	---event, printing the error "Terminated".
-	---@param filter? string|os.Event Event to filter for.
-	---@return string|os.Event event The name of the event that fired.
+	---@param filter? string|cc.os.Event Event to filter for.
+	---@return string|cc.os.Event event The name of the event that fired.
 	---@return any ... Optional additional parameters of the event.
 	pullEvent = function(filter) end,
 
@@ -97,8 +97,8 @@ local os = {
 	---This behaves almost the same as `os.pullEvent`, except it allows
 	---you to handle the terminate event yourself - the program will
 	---not stop execution when Ctrl+T is pressed.
-	---@param filter? string|os.RawEvent Event to filter for.
-	---@return string|os.RawEvent event The name of the event that fired.
+	---@param filter? string|cc.os.RawEvent Event to filter for.
+	---@return string|cc.os.RawEvent event The name of the event that fired.
 	---@return any ... Optional additional parameters of the event.
 	pullEventRaw = function(filter) end,
 
@@ -179,7 +179,7 @@ local os = {
 	--- - If called with `ingame`, the current world time will be returned. **This is the default**.
 	--- - If called with `utc`, returns the hour of the day in UTC time.
 	--- - If called with `local`, returns the hour of the day in the timezone the server is located in.
-	---@param locale os.Locale The locale of the time, or a table filled by os.date("*t") to decode. Defaults to `ingame` locale if not specified.
+	---@param locale cc.os.Locale The locale of the time, or a table filled by os.date("*t") to decode. Defaults to `ingame` locale if not specified.
 	---@return number time The hour of the selected locale, or a UNIX timestamp from the table, depending on the argument passed in.
 	time = function(locale) end,
 
@@ -187,7 +187,7 @@ local os = {
 	--- - If called with `ingame`, returns the number of days since the world was created. **This is the default**.
 	--- - If called with `utc`, returns the number of days since 1 January 1970 in the UTC timezone.
 	--- - If called with `local`, returns the number of days since 1 January 1970 in the server's local timezone.
-	---@param locale os.Locale The locale to get the day for. Defaults to `ingame` if not set.
+	---@param locale cc.os.Locale The locale to get the day for. Defaults to `ingame` if not set.
 	---@return number time The day depending on the selected locale.
 	day = function(locale) end,
 
@@ -195,7 +195,7 @@ local os = {
 	--- - If called with `ingame`, returns the number of in-game milliseconds since the world was created. **This is the default**.
 	--- - If called with `utc`, returns the number of milliseconds since 1 January 1970 in the UTC timezone.
 	--- - If called with `local`, returns the number of milliseconds since 1 January 1970 in the server's local timezone.
-	---@param locale os.Locale The locale to get the milliseconds for. Defaults to `ingame` if not set.
+	---@param locale cc.os.Locale The locale to get the milliseconds for. Defaults to `ingame` if not set.
 	---@return number milliseconds The milliseconds since the epoch depending on the selected locale.
 	epoch = function(locale) end,
 
@@ -210,7 +210,7 @@ local os = {
 	---and whether Daylight Savings Time is in effect. This table can be converted back to a timestamp with `os.time`.
 	---@param format string The format of the string to return. This defaults to `%c`, which expands to a string similar to `"Sat Dec 24 16:58:00 2011"`.
 	---@param time? number The timestamp to convert to a string. This defaults to the current time.
-	---@return string|os.TimestampTable time The timestamp to convert to a string. This defaults to the current time.
+	---@return string|cc.os.TimestampTable time The timestamp to convert to a string. This defaults to the current time.
 	date = function(format, time) end,
 }
 os.computerID = os.getComputerID

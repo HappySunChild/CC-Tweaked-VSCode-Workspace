@@ -1,22 +1,22 @@
 ---@meta
 
----@alias paintuils.ParsedImage number[][]
+---@alias cc.paintuils.ParsedImage number[][]
 
 ---Utilities for drawing more complex graphics, such as pixels, lines and images.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/paintutils.html">Official Documentation</a></h2>
----@class paintutilslib
+---@class cc.paintutilslib
 local paintutils = {
 	---Parses an image from a multi-line string
 	---@param image string The string containing the raw-image data.
-	---@return paintuils.ParsedImage image The parsed image data, suitable for use with paintutils.drawImage.
+	---@return cc.paintuils.ParsedImage image The parsed image data, suitable for use with paintutils.drawImage.
 	parseImage = function(image) end,
 
 	---Loads an image from a file.
 	---
 	---You can create a file suitable for being loaded using the `paint` program.
 	---@param path string The file to load.
-	---@return paintuils.ParsedImage image The parsed image data, suitable for use with paintutils.drawImage, or nil if the file does not exist.
+	---@return cc.paintuils.ParsedImage image The parsed image data, suitable for use with paintutils.drawImage, or nil if the file does not exist.
 	loadImage = function(path) end,
 
 	---Draws a single pixel to the current term at the specified position.
@@ -50,7 +50,7 @@ local paintutils = {
 	drawFilledBox = function(startX, startY, endX, endY, color) end,
 
 	---Draw an image loaded by `paintutils.parseImage` or `paintutils.loadImage`.
-	---@param image paintuils.ParsedImage The parsed image data.
+	---@param image cc.paintuils.ParsedImage The parsed image data.
 	---@param x number The x position to start drawing at.
 	---@param y number The y position to start drawing at.
 	drawImage = function(image, x, y) end,

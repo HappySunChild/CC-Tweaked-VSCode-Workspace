@@ -8,7 +8,7 @@
 ---enabling its modem (e.g. `drive_0`).
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/disk.html">Official Documentation</a></h2>
----@class disklib
+---@class cc.disklib
 local disk = {
 	---Checks whether any item at all is in the disk drive
 	---@param name string The name of the disk drive.

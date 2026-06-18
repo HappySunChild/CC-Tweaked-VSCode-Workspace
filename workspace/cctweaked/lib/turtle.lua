@@ -1,10 +1,10 @@
 ---@meta
 
----@alias turtle.Side
+---@alias cc.turtle.Side
 ---| '"left"'
 ---| '"right"'
 
----@class turtle.BlockInfo
+---@class cc.turtle.BlockInfo
 ---@field name string
 ---@field state table<string, any>
 ---@field tags table<string, true>
@@ -15,14 +15,14 @@
 ---broken or would like to place.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/modules/turtle.html">Official Documentation</a></h2>
----@class turtlelib
+---@class cc.turtlelib
 local turtle = {
 	---The builtin turtle API, without any generated helper functions.
 	---
 	---Historically this table behaved differently to the main turtle API,
 	---but this is no longer the case. You should not need to use it.
 	---@deprecated
-	---@type turtlelib
+	---@type cc.turtlelib
 	native = turtle,
 
 	---Craft a recipe based on the turtle's inventory.
@@ -65,19 +65,19 @@ local turtle = {
 	turnRight = function() end,
 
 	---Attempt to break the block in front of the turtle.
-	---@param side? turtle.Side The specific tool to use. Should be "left" or "right".
+	---@param side? cc.turtle.Side The specific tool to use. Should be "left" or "right".
 	---@return boolean success Whether a block was broken.
 	---@return string? reason The reason no block was broken.
 	dig = function(side) end,
 
 	---Attempt to break the block above the turtle.
-	---@param side? turtle.Side The specific tool to use. Should be "left" or "right".
+	---@param side? cc.turtle.Side The specific tool to use. Should be "left" or "right".
 	---@return boolean success Whether a block was broken.
 	---@return string? reason The reason no block was broken.
 	digUp = function(side) end,
 
 	---Attempt to break the block below the turtle.
-	---@param side? turtle.Side The specific tool to use. Should be "left" or "right".
+	---@param side? cc.turtle.Side The specific tool to use. Should be "left" or "right".
 	---@return boolean success Whether a block was broken.
 	---@return string? reason The reason no block was broken.
 	digDown = function(side) end,
@@ -161,19 +161,19 @@ local turtle = {
 	compareDown = function() end,
 
 	---Attack the entity in front of the turtle.
-	---@param side turtle.Side The specific tool to use.
+	---@param side cc.turtle.Side The specific tool to use.
 	---@return boolean didHit Whether an entity was attacked.
 	---@return string? reason The reason nothing was attacked.
 	attack = function(side) end,
 
 	---Attack the entity above the turtle.
-	---@param side turtle.Side The specific tool to use.
+	---@param side cc.turtle.Side The specific tool to use.
 	---@return boolean didHit Whether an entity was attacked.
 	---@return string? reason The reason nothing was attacked.
 	attackUp = function(side) end,
 
 	---Attack the entity below the turtle.
-	---@param side turtle.Side The specific tool to use.
+	---@param side cc.turtle.Side The specific tool to use.
 	---@return boolean didHit Whether an entity was attacked.
 	---@return string? reason The reason nothing was attacked.
 	attackDown = function(side) end,
@@ -252,27 +252,27 @@ local turtle = {
 
 	---Get information about the block in front of the turtle.
 	---@return boolean exists Whether there is a block in front of the turtle.
-	---@return turtle.BlockInfo|string info Information about the block in front, or a message explaining that there is no block.
+	---@return cc.turtle.BlockInfo|string info Information about the block in front, or a message explaining that there is no block.
 	inspect = function() end,
 
 	---Get information about the block above the turtle.
 	---@return boolean exists Whether there is a block in front of the turtle.
-	---@return turtle.BlockInfo|string info Information about the block in front, or a message explaining that there is no block.
+	---@return cc.turtle.BlockInfo|string info Information about the block in front, or a message explaining that there is no block.
 	inspectUp = function() end,
 
 	---Get information about the block below the turtle.
 	---@return boolean exists Whether there is a block in front of the turtle.
-	---@return turtle.BlockInfo|string info Information about the block in front, or a message explaining that there is no block.
+	---@return cc.turtle.BlockInfo|string info Information about the block in front, or a message explaining that there is no block.
 	inspectDown = function() end,
 
 	---Get detailed information about the items in the given slot.
 	---@param slot? number The slot to get information about. Defaults to the selected slot.
-	---@return peripheral.InventoryItem? info Information about the given slot, or nil if it is empty.
+	---@return cc.peripheral.InventoryItem? info Information about the given slot, or nil if it is empty.
 	getItemDetail = function(slot) end,
 
 	---Get detailed information about the items in the given slot.
 	---@param slot? number The slot to get information about. Defaults to the selected slot.
 	---@param detailed boolean Whether to include "detailed" information. When `true` the method will contain much more information about the item at the cost of taking longer to run.
-	---@return peripheral.DetailedInventoryItem? info Information about the given slot, or nil if it is empty.
+	---@return cc.peripheral.DetailedInventoryItem? info Information about the given slot, or nil if it is empty.
 	getItemDetail = function(slot, detailed) end,
 }

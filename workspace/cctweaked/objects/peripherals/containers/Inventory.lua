@@ -1,7 +1,7 @@
 ---@meta
 
 ---Methods for interacting with inventories.
----@class peripheral.Inventory
+---@class cc.peripheral.Inventory
 local Inventory = {
 	---Get the size of this inventory.
 	---@return integer slots The number of slots in this inventory.
@@ -10,12 +10,12 @@ local Inventory = {
 	---List all items in this inventory. This returns a table, with an entry for each slot.
 	---
 	---The returned table is sparse, and so empty slots will be nil - it is recommended to loop over using `pairs` rather than `ipairs`.
-	---@return peripheral.InventoryItem[] All items in this inventory.
+	---@return cc.peripheral.InventoryItem[] All items in this inventory.
 	list = function() end,
 
 	---Get detailed information about an item.
 	---@param slot integer The slot to get information about.
-	---@return peripheral.DetailedInventoryItem info Information about the item in this slot, or nil if not present.
+	---@return cc.peripheral.DetailedInventoryItem info Information about the item in this slot, or nil if not present.
 	getItemDetail = function(slot) end,
 
 	---Get the maximum number of items which can be stored in this slot.

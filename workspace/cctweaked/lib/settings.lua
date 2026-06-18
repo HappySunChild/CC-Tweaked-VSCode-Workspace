@@ -1,6 +1,6 @@
 ---@meta
 
----@class settings.SettingDetails
+---@class cc.settings.SettingDetails
 ---@field description? string
 ---@field default? any
 ---@field type? string
@@ -11,13 +11,13 @@
 ---These values then may be read or modified.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/modules/settings.html">Official Documentation</a></h2>
----@class settingslib
+---@class cc.settingslib
 local settings = {
 	---Define a new setting, optional specifying various properties about it.
 	---
 	---While settings do not have to be added before being used, doing so allows you to provide defaults and additional metadata.
 	---@param name string
-	---@param options settings.SettingDetails
+	---@param options cc.settings.SettingDetails
 	define = function(name, options) end,
 
 	---Remove a definition of a setting.
@@ -37,7 +37,7 @@ local settings = {
 
 	---Get details about a specific setting.
 	---@param name string The name of the setting to get.
-	---@return settings.SettingDetails details Information about this setting. This includes all information from settings.define, as well as this setting's value.
+	---@return cc.settings.SettingDetails details Information about this setting. This includes all information from settings.define, as well as this setting's value.
 	getDetails = function(name) end,
 
 	---Remove the value of a setting, setting it to the default.

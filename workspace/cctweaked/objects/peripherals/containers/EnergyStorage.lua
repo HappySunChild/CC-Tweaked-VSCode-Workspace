@@ -1,7 +1,7 @@
 ---@meta
 
 ---Methods for interacting with blocks which store energy.
----@class peripheral.EnergyStorage
+---@class cc.peripheral.EnergyStorage
 local EnergyStorage = {
 	---Get the energy of this block.
 	---@return number FE The energy stored in this block, in FE.

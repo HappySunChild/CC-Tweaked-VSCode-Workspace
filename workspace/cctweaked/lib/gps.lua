@@ -13,7 +13,7 @@
 ---You may choose which axes `x`, `y`, or `z` refer to.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/gps.html">Official Documentation</a></h2>
----@class gpslib
+---@class cc.gpslib
 local gps = {
 	---The channel which GPS requests and responses are broadcast on.
 	CHANNEL_GPS = 65534,

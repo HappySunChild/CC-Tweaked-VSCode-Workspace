@@ -1,6 +1,6 @@
 ---@meta
 
----@class window.Window : term.Redirect
+---@class cc.window.Window : cc.term.Redirect
 local Window = {
 	---Get the buffered contents of a line in this window.
 	---@param y number The y position of the line to get.
@@ -38,6 +38,6 @@ local Window = {
 	---@param ny number The new y position of this window.
 	---@param nWidth? number The new width of this window.
 	---@param nHeight? number The new height of this window.
-	---@param nParent? term.Redirect The new redirect object this window should draw to.
+	---@param nParent? cc.term.Redirect The new redirect object this window should draw to.
 	reposition = function(nx, ny, nWidth, nHeight, nParent) end,
 }

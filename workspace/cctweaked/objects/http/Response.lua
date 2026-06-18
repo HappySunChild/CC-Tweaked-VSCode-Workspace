@@ -2,7 +2,7 @@
 
 ---A http response. This provides the same methods as a `file`,
 ---though provides several request specific methods.
----@class http.Response : fs.ReadHandle
+---@class cc.http.Response : cc.fs.ReadHandle
 local Response = {
 	---Returns the response code and response message returned by the server.
 	---@return number code The response code (i.e. `200`)

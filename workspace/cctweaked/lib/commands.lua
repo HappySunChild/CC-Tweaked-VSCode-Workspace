@@ -1,6 +1,6 @@
 ---@meta
 
----@class commands.BlockInfo: turtle.BlockInfo
+---@class cc.commands.BlockInfo: cc.turtle.BlockInfo
 ---@field nbt? table<string, any>
 
 ---Execute [Minecraft commands](https://minecraft.wiki/w/Commands)
@@ -10,8 +10,8 @@
 ---to normal players.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/commands.html">Official Documentation</a></h2>
----@class commandslib
----@field native commandslib
+---@class cc.commandslib
+---@field native cc.commandslib
 local commands = {
 	---Execute a specific command.
 	---@param command string The command to execute.
@@ -49,7 +49,7 @@ local commands = {
 	---@param maxY number The end y coordinate of the range to query.
 	---@param maxZ number The end z coordinate of the range to query.
 	---@param dimension? string The dimension to query (e.g. "minecraft:overworld"). Defaults to the current dimension.
-	---@return commands.BlockInfo[] blocks A list of information about each block.
+	---@return cc.commands.BlockInfo[] blocks A list of information about each block.
 	getBlockInfos = function(minX, minY, minZ, maxX, maxY, maxZ, dimension) end,
 
 	---Get some basic information about a block.
@@ -58,6 +58,6 @@ local commands = {
 	---@param y number The y position of the block to query.
 	---@param z number The z position of the block to query.
 	---@param dimension? string The dimension to query (e.g. "minecraft:overworld"). Defaults to the current dimension.
-	---@return commands.BlockInfo
+	---@return cc.commands.BlockInfo
 	getBlockInfo = function(x, y, z, dimension) end,
 }

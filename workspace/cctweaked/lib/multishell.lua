@@ -17,7 +17,7 @@
 ---global environment, and so is not available to APIs.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/multishell.html">Official Documentation</a></h2>
----@class multishelllib
+---@class cc.multishelllib
 local multishell = {
 	---Get the currently visible process. This will be the one selected on the tab bar.
 	---

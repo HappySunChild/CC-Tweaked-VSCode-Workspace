@@ -13,7 +13,7 @@
 ---```
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/pocket.html">Official Documentation</a></h2>
----@class pocketlib
+---@class cc.pocketlib
 local pocket = {
 	---Search the player's inventory for another upgrade, replacing the existing one with that item if found.
 	---

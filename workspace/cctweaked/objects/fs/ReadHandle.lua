@@ -1,7 +1,7 @@
 ---@meta
 
 ---A file handle opened for reading with `fs.open`.
----@class fs.ReadHandle : fs.FileHandle
+---@class cc.fs.ReadHandle : cc.fs.FileHandle
 local ReadHandle = {
 	---Read a number of bytes from this file.
 	---@param count? integer The number of bytes to read. This may be 0 to determine we are at the end of the file. When absent, a single byte will be read.

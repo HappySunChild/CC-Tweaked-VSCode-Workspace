@@ -1,7 +1,7 @@
 ---@meta
 
 ---The printer peripheral allows printing text onto pages. These pages can then be crafted together into printed pages or books.
----@class peripheral.Printer
+---@class cc.peripheral.Printer
 local Printer = {
 	---Writes text to the current page.
 	---@param text string The value to write to the page.

@@ -16,7 +16,7 @@
 ---Grayscale colors are calculated by taking the average of the three components, i.e. `(red + green + blue) / 3`.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/colors.html">Official Documentation</a></h2>
----@class colorslib
+---@class cc.colorslib
 local colors = {
 	white = 1,
 	orange = 2,

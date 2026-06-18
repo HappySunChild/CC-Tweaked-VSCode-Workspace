@@ -1,7 +1,7 @@
 ---@meta
 
 ---A websocket, which can be used to send and receive messages with a web server.
----@class http.Websocket
+---@class cc.http.Websocket
 local Websocket = {
 	---Wait for a message from the server.
 	---@param timeout number The number of seconds to wait if no message is received.

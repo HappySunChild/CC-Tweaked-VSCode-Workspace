@@ -1,7 +1,7 @@
 ---@meta
 
 ---A file handle opened for writing by `fs.open`.
----@class fs.WriteHandle : fs.FileHandle
+---@class cc.fs.WriteHandle : cc.fs.FileHandle
 local WriteHandle = {
 	---Write a string or byte to the file.
 	---@param value string|number The string/byte to write.

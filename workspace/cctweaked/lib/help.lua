@@ -3,7 +3,7 @@
 ---Find help files on the current computer.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/help.html">Official Documentation</a></h2>
----@class helplib
+---@class cc.helplib
 local help = {
 	---Returns a colon-separated list of directories where help files are searched for. All directories are absolute.
 	---@return string path The current help search path, separated by colons.

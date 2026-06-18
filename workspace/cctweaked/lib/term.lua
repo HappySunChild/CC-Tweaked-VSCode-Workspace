@@ -3,18 +3,18 @@
 ---Interact with a computer's terminal or monitors, writing text and drawing ASCII graphics.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/modules/term.html">Official Documentation</a></h2>
----@class termlib : term.Redirect
+---@class cc.termlib : cc.term.Redirect
 local term = {
 	---Get the native terminal object of the current computer.
 	---
 	---It is recommended you do not use this function unless you absolutely have to.
 	---In a multitasked environment, term.native will not be the current terminal object,
 	---and so drawing may interfere with other programs.
-	---@return term.Redirect native The native terminal redirect.
+	---@return cc.term.Redirect native The native terminal redirect.
 	native = function() end,
 
 	---Returns the current terminal object of the computer.
-	---@return term.Redirect current The current terminal redirect.
+	---@return cc.term.Redirect current The current terminal redirect.
 	current = function() end,
 
 	---Redirects terminal output to a monitor, a `window`, or any other custom terminal object.
@@ -25,8 +25,8 @@ local term = {
 	---features - as those found in the term table. For example, a wrapped monitor is suitable.
 	---
 	---The redirect can be undone by pointing back to the previous terminal object (which this function returns whenever you switch).
-	---@param target term.Redirect The terminal redirect the term API will draw to.
-	---@return term.Redirect previous The previous redirect object, as returned by `term.current`.
+	---@param target cc.term.Redirect The terminal redirect the term API will draw to.
+	---@return cc.term.Redirect previous The previous redirect object, as returned by `term.current`.
 	---@see window
 	redirect = function(target) end,
 

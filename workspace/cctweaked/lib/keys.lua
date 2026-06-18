@@ -7,7 +7,7 @@
 ---rather than the underlying numerical values.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/keys.html">Official Documentation</a></h2>
----@class keyslib
+---@class cc.keyslib
 local keys = {
 	space = 32,
 	apostrophe = 39,

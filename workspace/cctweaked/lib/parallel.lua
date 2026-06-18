@@ -14,7 +14,7 @@
 ---can safely be used in one without affecting the event queue accessed by the other.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/parallel.html">Official Documentation</a></h2>
----@class parallellib
+---@class cc.parallellib
 local parallel = {
 	---Switches between execution of the functions, until any of them finishes.
 	---If any of the functions errors, the message is propagated upwards from the `parallel.waitForAny` call.

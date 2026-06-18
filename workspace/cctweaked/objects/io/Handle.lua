@@ -1,7 +1,7 @@
 ---@meta
 
 ---A file handle which can be read or written to.
----@class io.Handle : fs.FileHandle
+---@class cc.io.Handle : cc.fs.FileHandle
 local Handle = {
 	---Flush any buffered output, forcing it to be written to the file
 	flush = function() end,
@@ -22,7 +22,7 @@ local Handle = {
 	--- - L: Returns the next line (with a newline on the end).
 	--- - a: Returns the entire rest of the file.
 	--- - n: Returns a number (not implemented in CC).
-	---@param ... io.ReadFormat The formats to use.
+	---@param ... cc.io.ReadFormat The formats to use.
 	---@return string? data The data read from the file.
 	read = function(...) end,
 

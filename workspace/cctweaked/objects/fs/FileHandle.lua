@@ -1,6 +1,6 @@
 ---@meta
 
----@class fs.FileHandle
+---@class cc.fs.FileHandle
 local FileHandle = {
 	---Seek to a new position within the file, changing where bytes are written to.
 	---The new position is an offset given by `offset`, relative to a start position determined by `whence`:
@@ -9,7 +9,7 @@ local FileHandle = {
 	--- - "end": Relative to the end of the file.
 	---
 	---In case of success, seek returns the new file position from the beginning of the file.
-	---@param whence? fs.SeekWhence Where the offset is relative to.
+	---@param whence? cc.fs.SeekWhence Where the offset is relative to.
 	---@param offset? number The offset to seek to.
 	---@return number? position The new position.
 	---@return string? failReason The reason seeking failed.

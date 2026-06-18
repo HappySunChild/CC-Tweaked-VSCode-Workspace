@@ -2,31 +2,32 @@
 
 -- Global Libraries
 
-colors = nil ---@type colorslib
-colours = nil ---@type colourslib
-commands = nil ---@type commandslib
-disk = nil ---@type disklib
-fs = nil ---@type fslib
-gps = nil ---@type gpslib
-help = nil ---@type helplib
-http = nil ---@type httplib
-io = nil ---@type iolib
-keys = nil ---@type keyslib
-multishell = nil ---@type multishelllib
-os = nil ---@type oslib
-paintutils = nil ---@type paintutilslib
-parallel = nil ---@type parallellib
-peripheral = nil ---@type peripherallib
-pocket = nil ---@type pocketlib
-rednet = nil ---@type rednetlib
-redstone = nil ---@type redstonelib
-settings = nil ---@type settingslib
-shell = nil ---@type shelllib
-term = nil ---@type termlib
-textutils = nil ---@type textutilslib
-turtle = nil ---@type turtlelib
-vector = nil ---@type vectorlib
-window = nil ---@type windowlib
+colors = nil ---@type cc.colorslib
+colours = nil ---@type cc.colourslib
+commands = nil ---@type cc.commandslib
+disk = nil ---@type cc.disklib
+fs = nil ---@type cc.fslib
+gps = nil ---@type cc.gpslib
+help = nil ---@type cc.helplib
+http = nil ---@type cc.httplib
+io = nil ---@type cc.iolib
+keys = nil ---@type cc.keyslib
+multishell = nil ---@type cc.multishelllib
+os = nil ---@type cc.oslib
+paintutils = nil ---@type cc.paintutilslib
+parallel = nil ---@type cc.parallellib
+peripheral = nil ---@type cc.peripherallib
+pocket = nil ---@type cc.pocketlib
+rednet = nil ---@type cc.rednetlib
+redstone = nil ---@type cc.redstonelib
+rs = nil ---@type cc.redstonelib
+settings = nil ---@type cc.settingslib
+shell = nil ---@type cc.shelllib
+term = nil ---@type cc.termlib
+textutils = nil ---@type cc.textutilslib
+turtle = nil ---@type cc.turtlelib
+vector = nil ---@type cc.vectorlib
+window = nil ---@type cc.windowlib
 
 ---Stores the current ComputerCraft and Minecraft versions.
 ---@type string

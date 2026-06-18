@@ -1,6 +1,6 @@
 ---@meta
 
----@class term.Redirect
+---@class cc.term.Redirect
 local Redirect = {
 	---Write text at the current cursor position, moving the cursor to the end of the text.
 	---

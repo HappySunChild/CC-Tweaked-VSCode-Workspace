@@ -4,7 +4,7 @@
 ---It allows you to start programs, add completion for a program, and much more.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/modules/shell.html">Official Documentation</a></h2>
----@class shelllib
+---@class cc.shelllib
 local shell = {
 	---Run a program with the supplied arguments.
 	---

@@ -1,6 +1,6 @@
 ---@meta
 
----@alias fs.FileMode
+---@alias cc.fs.FileMode
 ---| '"r"'
 ---| '"w"'
 ---| '"a"'
@@ -8,12 +8,12 @@
 ---| '"wb"'
 ---| '"ab"'
 
----@alias fs.SeekWhence
+---@alias cc.fs.SeekWhence
 ---| '"set"'
 ---| '"cur"'
 ---| '"end"'
 
----@class fs.Attributes
+---@class cc.fs.Attributes
 ---@field size integer
 ---@field isDir boolean
 ---@field isReadOnly boolean
@@ -32,7 +32,7 @@
 ---peripheral mounts its disk's contents at `"disk/"`, `"disk1/"`, etc.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/fs.html">Official Documentation</a></h2>
----@class fslib
+---@class cc.fslib
 local fs = {
 	---Provides completion for a file or directory name, suitable for use with _G.read.
 	---When a directory is a possible candidate for completion, two entries are included -
@@ -136,8 +136,8 @@ local fs = {
 	---This changes `fs.ReadHandle.read` and `fs.WriteHandle.write` to read/write single
 	---**bytes as numbers** rather than strings.
 	---@param path string The path to the file to open.
-	---@param mode fs.FileMode The mode to open the file with.
-	---@return fs.ReadHandle | fs.WriteHandle handle A file handle object for the file.
+	---@param mode cc.fs.FileMode The mode to open the file with.
+	---@return cc.fs.ReadHandle | cc.fs.WriteHandle handle A file handle object for the file.
 	open = function(path, mode) end,
 
 	---Returns the name of the mount that the specified path is located on.
@@ -164,6 +164,6 @@ local fs = {
 	---since the UNIX epoch. This may be given to `os.date` in order to convert it
 	---to more usable form.
 	---@param path string The path to get attributes for.
-	---@return fs.Attributes attributes The resulting attributes.
+	---@return cc.fs.Attributes attributes The resulting attributes.
 	attributes = function(path) end,
 }

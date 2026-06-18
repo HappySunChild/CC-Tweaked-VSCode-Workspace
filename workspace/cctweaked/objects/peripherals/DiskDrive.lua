@@ -4,7 +4,7 @@
 ---and other "mountable media" (such as computers or turtles).
 ---
 ---They also allow you to play records.
----@class peripheral.DiskDrive
+---@class cc.peripheral.DiskDrive
 local DiskDrive = {
 	---Returns whether a disk is currently inserted in the drive.
 	---@return boolean isPresent Whether a disk is currently inserted in the drive.

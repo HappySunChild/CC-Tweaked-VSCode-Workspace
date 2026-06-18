@@ -5,7 +5,7 @@
 ---Command blocks are only wrapped as peripherals if the `enable_command_block` option is true within the config.
 ---
 ---This API is not the same as the commands API, which is exposed on command computers.
----@class peripheral.CommandBlock
+---@class cc.peripheral.CommandBlock
 local CommandBlock = {
 	---Get the command this command block will run.
 	---@return string command The current command.
