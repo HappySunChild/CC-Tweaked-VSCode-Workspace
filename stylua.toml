@@ -1,1 +1,2 @@
 syntax = "Lua52"
+column_width = 140
