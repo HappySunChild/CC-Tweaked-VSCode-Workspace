@@ -19,11 +19,11 @@ local RedstoneRequester = {
 	setConfiguration = function(configuration) end,
 
 	---Gets the Redstone Requester's request data.
-	---@return peripheral.InventoryItem[]
+	---@return cc.peripheral.InventoryItem[]
 	getRequest = function() end,
 	---Sets the packagers request, the same one as
 	---the one available in the GUI - maximum of 9 arguments.
-	---@param ... peripheral.InventoryItem
+	---@param ... cc.peripheral.InventoryItem
 	setRequest = function(...) end,
 
 	---Requests for a package in the network using the

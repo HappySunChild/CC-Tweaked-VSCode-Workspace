@@ -20,17 +20,17 @@ local TableCloth = {
 	setPriceTagCount = function(count) end,
 
 	---Gets the Item used for the Table Cloth's price tag.
-	---@return peripheral.InventoryItem
+	---@return cc.peripheral.InventoryItem
 	getPriceTagItem = function() end,
 	---Sets the Item used for the Table Cloth's price tag.
 	---@param item? string
 	setPriceTagItem = function(item) end,
 
 	---Gets the list of items requested on purchase.
-	---@return peripheral.InventoryItem[]
+	---@return cc.peripheral.InventoryItem[]
 	getWares = function() end,
 	---Sets the Table Cloth's wares that get requested on purchase.
-	---@param ... peripheral.InventoryItem
+	---@param ... cc.peripheral.InventoryItem
 	setWares = function(...) end,
 
 	---Returns whether the Table Cloth is a shop or not.

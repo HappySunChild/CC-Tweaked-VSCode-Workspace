@@ -19,7 +19,7 @@
 ---| '"regex"'
 ---| '"glob"'
 
----@class create.logistics.craft
+---@class create.logistics.Craft
 ---@field count integer
 ---@field recipe table<integer, string?>
 

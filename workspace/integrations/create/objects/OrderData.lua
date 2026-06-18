@@ -21,7 +21,7 @@
 ---@class create.OrderData
 local OrderData = {
 	---Gets the crafting recipes associated with the order.
-	---@return create.logistics.craft[]
+	---@return create.logistics.Craft[]
 	getCrafts = function() end,
 
 	---Gets the index of the package.
@@ -46,10 +46,10 @@ local OrderData = {
 
 	---Gets detailed information for a specific item stack in the order.
 	---@param slot integer
-	---@return peripheral.InventoryItem?
+	---@return cc.peripheral.InventoryItem?
 	getItemDetail = function(slot) end,
 
 	---Lists basic information about all items in the complete order, even if they are not in the package.
-	---@return peripheral.InventoryItem[]?
+	---@return cc.peripheral.InventoryItem[]?
 	list = function() end,
 }

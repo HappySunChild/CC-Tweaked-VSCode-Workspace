@@ -34,10 +34,10 @@ local Package = {
 
 	---Gets detailed information about an item in the package.
 	---@param slot integer
-	---@return peripheral.InventoryItem?
+	---@return cc.peripheral.InventoryItem?
 	getItemDetail = function(slot) end,
 
 	---List all items inside the package. This returns a table, with an entry for each slot.
-	---@return peripheral.InventoryItem[]
+	---@return cc.peripheral.InventoryItem[]
 	list = function() end,
 }

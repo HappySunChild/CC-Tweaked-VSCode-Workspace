@@ -35,7 +35,7 @@
 
 ---@class create.train.ScheduleEntry
 ---@field instruction create.train.ScheduleInstruction
----@field conditions? create.train.ScheduleCondition[][]
+---@field conditions create.train.ScheduleCondition[][]
 
 ---@class create.train.Schedule
 ---@field cyclic boolean
