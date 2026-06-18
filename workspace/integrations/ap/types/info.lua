@@ -1,0 +1,47 @@
+---@meta
+
+---@class ap.info.Entity : table
+---@field canFreeze boolean
+---@field uuid string
+---@field tags string[]
+---@field id number
+---@field x number
+---@field y number
+---@field z number
+---@field name string
+---@field isGlowing boolean
+---@field isInWall boolean
+---@field maxHealth number
+---@field health number
+
+---@class ap.info.Item : table
+---@field name string
+---@field count? number
+---@field maxStackSize? number
+---@field displayName? string
+---@field slot? number
+---@field tags? string[]
+---@field nbt? table
+---@field toSlot? number
+---@field fromSlot? number
+
+---@class ap.info.Block
+---@field name string
+---@field tags string[]
+---@field x number x coordinate
+---@field y number y coordinate
+---@field z number z coordinate
+
+---@class ap.info.Player
+---@field uuid string
+---@field name string
+---@field dimension string
+---@field eyeHeight number
+---@field pitch number
+---@field yaw number
+---@field health number
+---@field maxHealth number
+---@field airSupply number
+---@field x number
+---@field y number
+---@field z number

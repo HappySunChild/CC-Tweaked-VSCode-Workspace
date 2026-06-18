@@ -1,0 +1,149 @@
+---@meta
+
+---The Chat Box is able to read and write messages to the in-game chat.
+---You can send messages to just one player or to everyone.
+---@class ap.peripheral.ChatBox
+local ChatBox = {
+	---Broadcasts a message to the global chat. if `range` is specified it is sent to all players in the range.
+	---
+	---# Example
+	---```
+	---local chatBox = peripheral.find("chatBox")
+	---
+	---chatBox.sendMessage("Hello world!") -- Sends "[AP] Hello world!" in chat
+	---```
+	---@param message string The message to broadcast.
+	---@param prefix string? The text that appears inside the brackets at the start of a message. Defaults to "AP".
+	---@param brackets string? The brackets that appear around the prefix (ex: [AP]). Must be specified like "[]", "()", "<>", etc.
+	---@param bracketColor string? The color to use for the brackets, this must be in the [MOTD](https://www.digminecraft.com/lists/color_list_pc.php) code format.
+	---@param range number? The range, in meters, to which players will receive the message within.
+	---@param utf8Support boolean?
+	---@return boolean? success Whether the message was successfully sent.
+	---@return string? reason An error message.
+	sendMessage = function(message, prefix, brackets, bracketColor, range, utf8Support) end,
+
+	---Sends a message to the player with the specified `username`.
+	---
+	---# Example
+	---```
+	---local chatBox = peripheral.find("chatBox")
+	---
+	---chatBox.sendMessageToPlayer("Hello there.", "Player123") -- Sends "[AP] Hello there." to Player123 in chat
+	---```
+	---@see ap.peripheral.ChatBox.sendMessage
+	---@param message string The message to send.
+	---@param username string The username of the player to send the message to.
+	---@param prefix string? The text that appears inside the brackets at the start of a message. Defaults to "AP".
+	---@param brackets string? The brackets that appear around the prefix (ex: [AP]). Must be specified like "[]", "()", "<>", etc.
+	---@param bracketColor string? The color to use for the brackets, this must be in the [MOTD](https://www.digminecraft.com/lists/color_list_pc.php) code format.
+	---@param range number? The range, in meters, to which players will receive the message within.
+	---@param utf8Support boolean?
+	---@return boolean? success Whether the message was successfully sent.
+	---@return string? reason An error message.
+	sendMessageToPlayer = function(message, username, prefix, brackets, bracketColor, range, utf8Support) end,
+
+	---Sends a toast to the specified player. The design of the toast is the classic notification design.
+	---
+	---# Example
+	---```
+	---local chatBox = peripheral.find("chatBox")
+	---
+	---chatBox.sendToastToPlayer("I will chat box you", "Hello", "Dev", "&4&lBoxi", "()", "&c&l")
+	---```
+	---@param message string The message to send.
+	---@param title string The title of the toast.
+	---@param username string The username of the player to send the message to.
+	---@param prefix string? The text that appears inside the brackets at the start of a message. Defaults to "AP".
+	---@param brackets string? The brackets that appear around the prefix (ex: [AP]). Must be specified like "[]", "()", "<>", etc.
+	---@param bracketColor string? The color to use for the brackets, this must be in the [MOTD](https://www.digminecraft.com/lists/color_list_pc.php) code format.
+	---@param range number? The range, in meters, to which players will receive the message within.
+	---@param utf8Support boolean?
+	---@return boolean? success Whether the message was successfully sent.
+	---@return string? reason An error message.
+	sendToastToPlayer = function(message, title, username, prefix, brackets, bracketColor, range, utf8Support) end,
+
+	---Broadcasts a formatted json message to the global chat. if `range` is specified it is sent to all players in the range.
+	---
+	---# Example
+	---```
+	---local chatBox = peripheral.find("chatBox")
+	---
+	---local message = {
+	---	{text = "Click "},
+	---	{
+	---		text = "here",
+	---		underlined = true,
+	---		color = "aqua",
+	---		clickEvent = {
+	---			action = "open_url",
+	---			value = "https://advancedperipherals.madefor.cc/"
+	---		}
+	---	},
+	---	{text = " for the AP "},
+	---	{text = "documentation", color = "red"},
+	---	{text = "!"}
+	---}
+	---
+	---local json = textutils.serialiseJSON(message)
+	---
+	---chatBox.sendFormattedMessage(json)
+	---```
+	---@see ap.peripheral.ChatBox.sendMessage
+	---@param json string The json message to send.
+	---@param prefix string? The text that appears inside the brackets at the start of a message. Defaults to "AP".
+	---@param brackets string? The brackets that appear around the prefix (ex: [AP]). Must be specified like "[]", "()", "<>", etc.
+	---@param bracketColor string? The color to use for the brackets, this must be in the [MOTD](https://www.digminecraft.com/lists/color_list_pc.php) code format.
+	---@param range number? The range, in meters, to which players will receive the message within.
+	---@param utf8Support boolean?
+	---@return boolean? success Whether the message was successfully sent.
+	---@return string? reason An error message.
+	sendFormattedMessage = function(json, prefix, brackets, bracketColor, range, utf8Support) end,
+
+	---Sends a formatted json message to the player with the specified `username`.
+	---@see ap.peripheral.ChatBox.sendMessageToPlayer
+	---@param json string The json message to send.
+	---@param username string The username of the player to send the message to.
+	---@param prefix string? The text that appears inside the brackets at the start of a message. Defaults to "AP".
+	---@param brackets string? The brackets that appear around the prefix (ex: [AP]). Must be specified like "[]", "()", "<>", etc.
+	---@param bracketColor string? The color to use for the brackets, this must be in the [MOTD](https://www.digminecraft.com/lists/color_list_pc.php) code format.
+	---@param range number? The range, in meters, to which players will receive the message within.
+	---@param utf8Support boolean?
+	---@return boolean? success Whether the message was successfully sent.
+	---@return string? reason An error message.
+	sendFormattedMessageToPlayer = function(json, username, prefix, brackets, bracketColor, range, utf8Support) end,
+
+	---Sends a formatted toast to the specified player. The design of the toast is the classic notification design.
+	---
+	---# Example
+	---```
+	---local chatBox = peripheral.find("chatBox")
+	---
+	---
+	---local title = {
+	---    { text = "Hello", color = "dark_purple"}
+	---}
+	---
+	---local message = {
+	---    { text = "I will chat "},
+	---    { text = "box ", color = "red"},
+	---    { text = "you"}
+	---}
+	---
+	---local titleJson = textutils.serializeJSON(title)
+	---local messageJson = textutils.serialiseJSON(message)
+	---
+	---successful, error = chatBox.sendFormattedToastToPlayer(messageJson, titleJson, "Dev", "&4&lBoxi", "()", "&c&l")
+	---```
+	---@see ap.peripheral.ChatBox.sendToastToPlayer
+	---@param message_json string The message to send formatted in json.
+	---@param title_json string The title of the toast formatted in json.
+	---@param username string The username of the player to send the message to.
+	---@param prefix string? The text that appears inside the brackets at the start of a message. Defaults to "AP".
+	---@param brackets string? The brackets that appear around the prefix (ex: [AP]). Must be specified like "[]", "()", "<>", etc.
+	---@param bracketColor string? The color to use for the brackets, this must be in the [MOTD](https://www.digminecraft.com/lists/color_list_pc.php) code format.
+	---@param range number? The range, in meters, to which players will receive the message within.
+	---@param utf8Support boolean?
+	---@return boolean? success Whether the message was successfully sent.
+	---@return string? reason An error message.
+	sendFormattedToastToPlayer = function(message_json, title_json, username, prefix, brackets, bracketColor, range, utf8Support) end,
+}
