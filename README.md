@@ -1,5 +1,5 @@
 # CC:Tweaked VSCode Workspace
- A [LuaCATS](https://luals.github.io/wiki/annotations/) typed workspace for [`CC:Tweaked`](https://github.com/cc-tweaked/CC-Tweaked), as well as some integrations for [`Advanced Peripherals`](https://github.com/IntelligenceModding/AdvancedPeripherals), [`Create`](https://github.com/Creators-of-Create/Create), and [`Tom's Peripherals`](https://github.com/tom5454/Toms-Peripherals).
+ A [LuaCATS](https://luals.github.io/wiki/annotations/) typed workspace for [`CC:Tweaked`](https://github.com/cc-tweaked/CC-Tweaked), as well as some integrations for [`Advanced Peripherals`](https://github.com/IntelligenceModding/AdvancedPeripherals), [`Create`](https://github.com/Creators-of-Create/Create), [`Tom's Peripherals`](https://github.com/tom5454/Toms-Peripherals), and [`Plethora`](https://github.com/SquidDev-CC/plethora).
 
 ## How To Install
 You will need the [Lua Language Server VS Code extension by sumneko](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) for this workspace to work.
