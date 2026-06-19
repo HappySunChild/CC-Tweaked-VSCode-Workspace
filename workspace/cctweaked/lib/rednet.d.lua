@@ -1,7 +1,5 @@
 ---@meta
 
----@alias cc.rednet.Transmittable string | boolean | number | table
-
 ---Communicate with other computers by using modems.
 ---rednet provides a layer of abstraction on top of the main modem peripheral,
 ---making it slightly easier to use.
@@ -35,14 +33,14 @@ local rednet = {
 	---Assuming the target was in range and also had a correctly opened modem,
 	---the target computer may then use rednet.receive to collect the message.
 	---@param recipient number The ID of the receiving computer.
-	---@param message cc.rednet.Transmittable The message to send. Like with `modem.transmit`, this can contain any primitive type (numbers, booleans and strings) as well as tables. Other types (like functions), as well as metatables, will not be transmitted.
+	---@param message cc.types.rednet.Transmittable The message to send. Like with `modem.transmit`, this can contain any primitive type (numbers, booleans and strings) as well as tables. Other types (like functions), as well as metatables, will not be transmitted.
 	---@param protocol? string The "protocol" to send this message under. When using rednet.receive one can filter to only receive messages sent under a particular protocol.
 	---@return boolean sent If this message was successfully sent (i.e. if rednet is currently open). Note, this does not guarantee the message was actually received.
 	send = function(recipient, message, protocol) end,
 
 	---Broadcasts a string message over the predefined CHANNEL_BROADCAST channel.
 	---The message will be received by every device listening to rednet.
-	---@param message cc.rednet.Transmittable The message to broadcast. Like with `modem.transmit`, this can contain any primitive type (numbers, booleans and strings) as well as tables. Other types (like functions), as well as metatables, will not be transmitted.
+	---@param message cc.types.rednet.Transmittable The message to broadcast. Like with `modem.transmit`, this can contain any primitive type (numbers, booleans and strings) as well as tables. Other types (like functions), as well as metatables, will not be transmitted.
 	---@param protocol string The "protocol" to send this message under. When using rednet.receive one can filter to only receive messages sent under a particular protocol.
 	broadcast = function(message, protocol) end,
 
@@ -50,7 +48,7 @@ local rednet = {
 	---@param protocol_filter? string The protocol the received message must be sent with. If specified, any messages not sent under this protocol will be discarded.
 	---@param timeout? number The number of seconds to wait if no message is received.
 	---@return number id The computer which sent this message.
-	---@return cc.rednet.Transmittable message The received message.
+	---@return cc.types.rednet.Transmittable message The received message.
 	---@return string? protocol The protocol this message was sent under.
 	receive = function(protocol_filter, timeout) end,
 

@@ -22,7 +22,7 @@ local Handle = {
 	--- - L: Returns the next line (with a newline on the end).
 	--- - a: Returns the entire rest of the file.
 	--- - n: Returns a number (not implemented in CC).
-	---@param ... cc.io.ReadFormat The formats to use.
+	---@param ... cc.types.io.ReadFormat The formats to use.
 	---@return string? data The data read from the file.
 	read = function(...) end,
 

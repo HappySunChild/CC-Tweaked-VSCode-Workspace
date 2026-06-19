@@ -23,7 +23,7 @@ local Modem = {
 	---Modems listening on the channel will queue a `modem_message` event on adjacent computers.
 	---@param channel number The channel to send messages on.
 	---@param replyChannel number The channel that responses to this message should be sent on. This can be the same as channel or entirely different. The channel must have been opened on the sending computer in order to receive the replies.
-	---@param payload cc.rednet.Transmittable The object to send. This can be any primitive type (boolean, number, string) as well as tables. Other types (like functions), as well as metatables, will not be transmitted.
+	---@param payload cc.types.rednet.Transmittable The object to send. This can be any primitive type (boolean, number, string) as well as tables. Other types (like functions), as well as metatables, will not be transmitted.
 	transmit = function(channel, replyChannel, payload) end,
 
 	---Determine if this is a wired or wireless modem.

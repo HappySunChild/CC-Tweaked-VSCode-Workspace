@@ -7,7 +7,7 @@ local FluidStorage = {
 	---
 	---Each tank either contains some amount of fluid or is empty.
 	---Tanks with fluids inside will return some basic information about the fluid, including its name and amount.
-	---@return cc.peripheral.FluidTankInfo[]
+	---@return cc.types.peripheral.FluidTankDetails[]
 	tanks = function() end,
 
 	---Move a fluid from one fluid container to another connected one.

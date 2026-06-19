@@ -1,8 +1,5 @@
 ---@meta
 
----@class cc.commands.BlockInfo: cc.turtle.BlockInfo
----@field nbt? table<string, any>
-
 ---Execute [Minecraft commands](https://minecraft.wiki/w/Commands)
 ---using a command computer
 ---
@@ -49,7 +46,7 @@ local commands = {
 	---@param maxY number The end y coordinate of the range to query.
 	---@param maxZ number The end z coordinate of the range to query.
 	---@param dimension? string The dimension to query (e.g. "minecraft:overworld"). Defaults to the current dimension.
-	---@return cc.commands.BlockInfo[] blocks A list of information about each block.
+	---@return cc.types.BlockDetails[] blocks A list of information about each block.
 	getBlockInfos = function(minX, minY, minZ, maxX, maxY, maxZ, dimension) end,
 
 	---Get some basic information about a block.
@@ -58,6 +55,6 @@ local commands = {
 	---@param y number The y position of the block to query.
 	---@param z number The z position of the block to query.
 	---@param dimension? string The dimension to query (e.g. "minecraft:overworld"). Defaults to the current dimension.
-	---@return cc.commands.BlockInfo
+	---@return cc.types.BlockDetails
 	getBlockInfo = function(x, y, z, dimension) end,
 }

@@ -22,10 +22,10 @@ local Packager = {
 
 	---Gets detailed information about an item in the connected inventory.
 	---@param slot integer
-	---@return cc.peripheral.InventoryItem?
+	---@return cc.types.items.ItemStackDetails?
 	getItemDetail = function(slot) end,
 
 	---List all items in the connected inventory. This returns a table, with an entry for each slot.
-	---@return cc.peripheral.InventoryItem[]
+	---@return cc.types.items.ItemStackDetails[]
 	list = function() end,
 }

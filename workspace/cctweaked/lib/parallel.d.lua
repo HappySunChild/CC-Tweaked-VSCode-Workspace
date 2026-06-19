@@ -18,11 +18,12 @@
 local parallel = {
 	---Switches between execution of the functions, until any of them finishes.
 	---If any of the functions errors, the message is propagated upwards from the `parallel.waitForAny` call.
-	---@param ... function The functions this task will run.
+	---@param ... function The functions to run in parallel.
 	waitForAny = function(...) end,
 
-	---Switches between execution of the functions, until all of them are finished.
-	---If any of the functions errors, the message is propagated upwards from the `parallel.waitForAll` call.
-	---@param ... function The functions this task will run.
+	---Runs several functions in parallel, until all of them are finished.
+	---
+	---If any of the functions errors, the other functions are not resumed, and the error is propagated upwards.
+	---@param ... fun(spawn: function) The functions to run in parallel.
 	waitForAll = function(...) end,
 }

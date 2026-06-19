@@ -5,13 +5,13 @@
 ---@class ap.peripheral.InventoryManager
 local InventoryManager = {
 	---Adds an item to the player's inventory and returns the amount of the item added.
-	---@param direction cc.peripheral.Side | string The direction is the direction of the container relative to the peripheral.
+	---@param direction cc.types.Side | string The direction is the direction of the container relative to the peripheral.
 	---@param item ap.info.Item
 	---@return number amount_added
 	addItemToPlayer = function(direction, item) end,
 
 	---Removes an item from the player's inventory and returns the amount of the item removed.
-	---@param direction cc.peripheral.Side | string
+	---@param direction cc.types.Side | string
 	---@param item ap.info.Item
 	---@return number amount_removed
 	removeItemFromPlayer = function(direction, item) end,

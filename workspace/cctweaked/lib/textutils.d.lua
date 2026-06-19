@@ -1,33 +1,16 @@
 ---@meta
 
----@class cc.textutils.EmptyJsonArray
----@class cc.textutils.JsonNull
-
----@class cc.textutils.SerializeOptions
----@field compact? boolean
----@field allow_repetitions? boolean
-
----@class cc.textutils.JsonSerializeOptions
----@field nbt_style? boolean
----@field unicode_strings? boolean
----@field allow_repetitions? boolean
-
----@class cc.textutils.JsonUnserializeOptions
----@field nbt_stlye? boolean
----@field parse_null? boolean
----@field parse_empty_array? boolean
-
 ---Helpful utilities for formatting and manipulating strings.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/modules/textutils.html">Official Documentation</a></h2>
 ---@class cc.textutilslib
 local textutils = {
 	---A table representing an empty JSON array, in order to distinguish it from an empty JSON object.
-	---@type cc.textutils.EmptyJsonArray
+	---@type cc.types.textutils.EmptyJsonArray
 	empty_json_array = nil,
 
 	---A table representing the JSON null value.
-	---@type cc.textutils.JsonNull
+	---@type cc.types.textutils.JsonNull
 	json_null = nil,
 
 	---Slowly writes string text at current cursor position, character-by-character.
@@ -67,7 +50,7 @@ local textutils = {
 
 	---Convert a Lua object into a textual representation, suitable for saving in a file or pretty-printing.
 	---@param obj any The object to serialize.
-	---@param options? cc.textutils.SerializeOptions Options for serialization.
+	---@param options? cc.types.textutils.SerializeOptions Options for serialization.
 	---@return string serialized The serialized representation.
 	serialize = function(obj, options) end,
 
@@ -81,13 +64,13 @@ local textutils = {
 	---This is largely intended for interacting with various functions from the `commands` API,
 	---though may also be used in making `http` requests.
 	---@param obj any The value to serialize.
-	---@param options? boolean|cc.textutils.JsonSerializeOptions Options for serialization, or `true` for NBT-style JSON (non-quoted keys) instead of standard JSON.
+	---@param options? boolean | cc.types.textutils.JsonSerializeOptions Options for serialization, or `true` for NBT-style JSON (non-quoted keys) instead of standard JSON.
 	---@return string serialized The serialized object.
 	serializeJSON = function(obj, options) end,
 
 	---Converts a serialised JSON string back into a reassembled Lua object.
 	---@param serialized string The serialised string to deserialise.
-	---@param options? cc.textutils.JsonUnserializeOptions Options which control how this JSON object is parsed.
+	---@param options? cc.types.textutils.JsonUnserializeOptions Options which control how this JSON object is parsed.
 	---@return any? deserialized The deserialised object, or `nil` if the object could not be deserialized.
 	---@return string reason A message describing why the JSON string is invalid.
 	unserializeJSON = function(serialized, options) end,

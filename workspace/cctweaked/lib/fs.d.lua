@@ -1,25 +1,5 @@
 ---@meta
 
----@alias cc.fs.FileMode
----| '"r"'
----| '"w"'
----| '"a"'
----| '"rb"'
----| '"wb"'
----| '"ab"'
-
----@alias cc.fs.SeekWhence
----| '"set"'
----| '"cur"'
----| '"end"'
-
----@class cc.fs.Attributes
----@field size integer
----@field isDir boolean
----@field isReadOnly boolean
----@field created number
----@field modified number
-
 ---Interact with the computer's files and filesystem, allowing you
 ---to manipulate files, directories and paths.
 ---
@@ -136,7 +116,7 @@ local fs = {
 	---This changes `fs.ReadHandle.read` and `fs.WriteHandle.write` to read/write single
 	---**bytes as numbers** rather than strings.
 	---@param path string The path to the file to open.
-	---@param mode cc.fs.FileMode The mode to open the file with.
+	---@param mode cc.types.fs.FileMode The mode to open the file with.
 	---@return cc.fs.ReadHandle | cc.fs.WriteHandle handle A file handle object for the file.
 	open = function(path, mode) end,
 
@@ -164,6 +144,6 @@ local fs = {
 	---since the UNIX epoch. This may be given to `os.date` in order to convert it
 	---to more usable form.
 	---@param path string The path to get attributes for.
-	---@return cc.fs.Attributes attributes The resulting attributes.
+	---@return cc.types.fs.Attributes attributes The resulting attributes.
 	attributes = function(path) end,
 }

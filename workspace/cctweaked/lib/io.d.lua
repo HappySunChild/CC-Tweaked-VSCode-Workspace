@@ -1,10 +1,5 @@
 ---@meta
 
----@alias cc.io.ReadFormat
----| '"l"'
----| '"L"'
----| '"a"'
-
 ---Emulates Lua's standard io library.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/module/io.html">Official Documentation</a></h2>
@@ -34,7 +29,7 @@ local io = {
 	---Read from the currently opened input file.
 	---
 	---This is equivalent to `io.input():read(...)`.
-	---@param ... cc.io.ReadFormat The formats to read, defaulting to a whole line.
+	---@param ... cc.types.io.ReadFormat The formats to read, defaulting to a whole line.
 	---@return string? data The data read, or nil if nothing can be read.
 	read = function(...) end,
 
@@ -64,12 +59,12 @@ local io = {
 	---Once the end of the file has been reached, nil will be returned. The file is automatically closed.
 	---If no file name is given, the current input will be used instead. In this case, the handle is not used.
 	---@param filename string The name of the file to extract lines from.
-	---@param ReadFormat cc.io.ReadFormat The formats to use.
+	---@param ReadFormat cc.types.io.ReadFormat The formats to use.
 	lines = function(filename, ReadFormat) end,
 
 	---Open a file with the given mode, either returning a new file handle or nil, plus an error message.
 	---@param path string The name of the file to open.
-	---@param mode cc.fs.FileMode The mode to open the file with. This defaults to r.
+	---@param mode cc.types.fs.FileMode The mode to open the file with. This defaults to r.
 	---@return cc.io.Handle handle The opened file.
 	---@return string reason The reason the file could not be opened.
 	open = function(path, mode) end,

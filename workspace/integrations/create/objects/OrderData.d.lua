@@ -46,10 +46,10 @@ local OrderData = {
 
 	---Gets detailed information for a specific item stack in the order.
 	---@param slot integer
-	---@return cc.peripheral.InventoryItem?
+	---@return cc.types.items.ItemStackDetails?
 	getItemDetail = function(slot) end,
 
 	---Lists basic information about all items in the complete order, even if they are not in the package.
-	---@return cc.peripheral.InventoryItem[]?
+	---@return cc.types.items.ItemStackDetails[]?
 	list = function() end,
 }

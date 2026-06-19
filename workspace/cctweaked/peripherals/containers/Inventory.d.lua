@@ -10,12 +10,12 @@ local Inventory = {
 	---List all items in this inventory. This returns a table, with an entry for each slot.
 	---
 	---The returned table is sparse, and so empty slots will be nil - it is recommended to loop over using `pairs` rather than `ipairs`.
-	---@return cc.peripheral.InventoryItem[] All items in this inventory.
+	---@return cc.types.items.BasicItemStackDetails[] All items in this inventory.
 	list = function() end,
 
 	---Get detailed information about an item.
 	---@param slot integer The slot to get information about.
-	---@return cc.peripheral.DetailedInventoryItem info Information about the item in this slot, or nil if not present.
+	---@return cc.types.items.ItemStackDetails info Information about the item in this slot, or nil if not present.
 	getItemDetail = function(slot) end,
 
 	---Get the maximum number of items which can be stored in this slot.
