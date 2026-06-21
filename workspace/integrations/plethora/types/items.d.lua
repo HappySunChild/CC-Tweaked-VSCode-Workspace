@@ -1,11 +1,11 @@
 ---@meta
 
----@class plethora.item.ItemInfo
+---@class plethora.types.items.ItemInfo
 ---@field name string
 ---@field count integer
 ---@field damage integer
 
----@class plethora.item.ItemMetadata
+---@class plethora.types.items.ItemMetadata
 ---@field name string
 ---@field rawName string
 ---@field displayName string

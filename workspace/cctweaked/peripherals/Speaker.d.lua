@@ -1,6 +1,6 @@
 ---@meta
 
----@alias cc.peripheral.Speaker.Instrument
+---@alias cc.types.SpeakerInstrument
 ---| '"harp"'
 ---| '"basedrum"'
 ---| '"snare"'
@@ -17,12 +17,13 @@
 ---| '"bit"'
 ---| '"banjo"'
 ---| '"pling"'
+---| string
 
 ---The speaker peripheral allows your computer to play notes and other sounds.
 ---@class cc.peripheral.Speaker
 local Speaker = {
 	---Plays a note block note through the speaker.
-	---@param instrument cc.peripheral.Speaker.Instrument The instrument to use to play this note.
+	---@param instrument cc.types.SpeakerInstrument The instrument to use to play this note.
 	---@param volume? number The volume to play the note at, from 0.0 to 3.0. Defaults to 1.0.
 	---@param pitch? number The pitch to play the note at in semitones, from 0 to 24. Defaults to 12.
 	---@return boolean success Whether the note could be played as the limit was reached.

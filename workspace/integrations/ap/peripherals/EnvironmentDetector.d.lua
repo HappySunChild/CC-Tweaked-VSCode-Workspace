@@ -85,6 +85,6 @@ local EnvironmentDetector = {
 	listDimensions = function() end,
 
 	---Returns a list of all entities in the specified range.
-	---@return ap.info.Entity[]
+	---@return ap.types.info.Entity[]
 	scanEntities = function() end,
 }

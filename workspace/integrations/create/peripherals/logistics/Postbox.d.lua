@@ -13,11 +13,11 @@ local Postbox = {
 	setAddress = function(address) end,
 
 	---Gets the Postbox's configuration.
-	---@return create.logistics.PortConfiguration
+	---@return create.types.logistics.PortConfiguration
 	getConfiguration = function() end,
 
 	---Sets the Postbox's configuration.
-	---@param configuration create.logistics.PortConfiguration
+	---@param configuration create.types.logistics.PortConfiguration
 	setConfiguration = function(configuration) end,
 
 	---Get detailed information about an item in the Postbox's inventory.

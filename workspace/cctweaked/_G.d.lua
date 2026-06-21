@@ -1,7 +1,5 @@
 ---@meta
 
--- Global Libraries
-
 colors = nil ---@type cc.colorslib
 colours = nil ---@type cc.colourslib
 commands = nil ---@type cc.commandslib

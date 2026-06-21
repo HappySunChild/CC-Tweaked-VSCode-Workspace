@@ -53,11 +53,11 @@ local TrainStation = {
 	hasSchedule = function() end,
 
 	---Returns the currently present train's schedule.
-	---@return create.train.Schedule
+	---@return create.types.train.Schedule
 	getSchedule = function() end,
 
 	---Sets the currently present train's schedule. This will overwrite the currently set schedule.
-	---@param schedule create.train.Schedule
+	---@param schedule create.types.train.Schedule
 	setSchedule = function(schedule) end,
 
 	---Tests if a route to the station named `destination` is possible from this station.

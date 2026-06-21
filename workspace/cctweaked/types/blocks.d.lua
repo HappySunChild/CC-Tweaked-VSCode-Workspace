@@ -4,7 +4,7 @@
 ---These functions all return a table containing information about the block that will loosely fit the scheme defined in this type.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/reference/block_details.html">Official Documentation</a></h2>
----@class cc.types.BlockDetails
+---@class cc.types.blocks.BlockDetails
 ---@field name string The namespaced ID for this block, e.g. `minecraft:dirt`. See [the Minecraft wiki](https://minecraft.wiki/w/Java_Edition_data_values#Blocks) for a list of vanilla block IDs.
 ---@field state table<string, any> A table containing the block state of the block.
 ---@field tags table<string, true>? The set of tags for this block. This is a mapping of tag name to `true`.

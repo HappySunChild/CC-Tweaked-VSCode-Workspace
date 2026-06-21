@@ -18,12 +18,12 @@ local peripheral = {
 	getNames = function() end,
 
 	---Get all available methods for the peripheral with the given name.
-	---@param name cc.types.Side | string The name of the peripheral to find.
+	---@param name cc.types.peripheral.Side | string The name of the peripheral to find.
 	---@return string[]? methods A list of methods provided by this peripheral, or `nil` if it is not present.
 	getMethods = function(name) end,
 
 	---Determines if a peripheral is present with the given name.
-	---@param name cc.types.Side | string The side or network name that you want to check.
+	---@param name cc.types.peripheral.Side | string The side or network name that you want to check.
 	---@return boolean isPresent If a peripheral is present with the given name.
 	isPresent = function(name) end,
 
@@ -52,7 +52,7 @@ local peripheral = {
 
 	---Get a table containing all functions available on a peripheral.
 	---These can then be called instead of using `peripheral.call` every time.
-	---@param name cc.types.Side | string The name of the peripheral to wrap.
+	---@param name cc.types.peripheral.Side | string The name of the peripheral to wrap.
 	---@return cc.types.peripheral.WrappedPeripheral wrappedPeripheral The table containing the peripheral's methods, or nil if there is no peripheral present with the given name.
 	wrap = function(name) end,
 

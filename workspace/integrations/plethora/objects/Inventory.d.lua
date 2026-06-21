@@ -28,7 +28,7 @@ local Inventory = {
 
 	---Returns the metadata of item at the specified slot.
 	---@param slot integer
-	---@return plethora.item.ItemMetadata metadata
+	---@return plethora.types.items.ItemMetadata metadata
 	getItemMeta = function(slot) end,
 
 	---Pull items to this inventory from another inventory. Returns the amount transferred.
@@ -46,14 +46,14 @@ local Inventory = {
 	pushItems = function(to_name, from_slot, limit, to_slot) end,
 
 	---Returns a list of all items in this inventory.
-	---@return table<integer, plethora.item.ItemInfo> items
+	---@return table<integer, plethora.types.items.ItemInfo> items
 	list = function() end,
 }
 
 ---@class plethora.ItemStack : plethora.Documented
 local ItemStack = {
 	---Returns metadata about this object.
-	---@return plethora.item.ItemMetadata metadata
+	---@return plethora.types.items.ItemMetadata metadata
 	getMetadata = function() end,
 
 	---Drop an item on the ground. Returns the number of items dropped.

@@ -1,6 +1,6 @@
 ---@meta
 
----@class ap.info.Entity : table
+---@class ap.types.info.Entity
 ---@field canFreeze boolean
 ---@field uuid string
 ---@field tags string[]
@@ -14,7 +14,7 @@
 ---@field maxHealth number
 ---@field health number
 
----@class ap.info.Item : table
+---@class ap.types.info.Item
 ---@field name string
 ---@field count? number
 ---@field maxStackSize? number
@@ -25,14 +25,14 @@
 ---@field toSlot? number
 ---@field fromSlot? number
 
----@class ap.info.Block
+---@class ap.types.info.Block
 ---@field name string
 ---@field tags string[]
 ---@field x number x coordinate
 ---@field y number y coordinate
 ---@field z number z coordinate
 
----@class ap.info.Player
+---@class ap.types.info.Player
 ---@field uuid string
 ---@field name string
 ---@field dimension string

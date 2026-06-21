@@ -11,7 +11,7 @@ local Canvas3D = {
 	clear = function() end,
 
 	---Creates a new 3D canvas centered relative to the current position.
-	---@param offset plethora.common.Position3D?
+	---@param offset plethora.types.Position3D?
 	---@return plethora.Canvas3DHandle
 	create = function(offset) end,
 }
@@ -22,7 +22,7 @@ local Canvas3DHandle = {
 	clear = function() end,
 
 	---Creates an item model.
-	---@param position plethora.common.Position3D
+	---@param position plethora.types.Position3D
 	---@param item string
 	---@param damage? integer
 	---@param scale? number
@@ -41,19 +41,19 @@ local Canvas3DHandle = {
 	addBox = function(x, y, z, width, height, depth, color) end,
 
 	---Creates a new line.
-	---@param start plethora.common.Position3D
-	---@param finish plethora.common.Position3D
+	---@param start plethora.types.Position3D
+	---@param finish plethora.types.Position3D
 	---@param thickness? number
 	---@param color? integer
 	---@return plethora.Canvas3D.Line
 	addLine = function(start, finish, thickness, color) end,
 
 	---Creates a new frame to put 2D objects in.
-	---@param position plethora.common.Position3D
+	---@param position plethora.types.Position3D
 	---@return plethora.Canvas3D.Frame
 	addFrame = function(position) end,
 
 	---Recenters this canvas relative to the current position.
-	---@param offset? plethora.common.Position3D
+	---@param offset? plethora.types.Position3D
 	recenter = function(offset) end,
 }

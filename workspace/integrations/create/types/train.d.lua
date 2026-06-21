@@ -1,20 +1,20 @@
 ---@meta
 
----@alias create.train.SignalState
+---@alias create.types.train.SignalState
 ---| '"GREEN"'
 ---| '"YELLOW"'
 ---| '"RED"'
 
----@alias create.train.SignalType
+---@alias create.types.train.SignalType
 ---| '"ENTRY_SIGNAL"'
 ---| '"CROSS_SIGNAL"'
 
----@alias create.train.InstructionId
+---@alias create.types.train.InstructionId
 ---| '"create:destination"' Move to a certain train station. This instruction requires at least `1` condition.
 ---| '"create:rename"' Change the schedule title. This instruction cannot have conditions.
 ---| '"create:throttle"' Change the train's throttle. This instruction cannot have conditions.
 
----@alias create.train.ConditionId
+---@alias create.types.train.ConditionId
 ---| '"create:delay"' Wait for a set delay. Can be measured in ticks, seconds or minutes.
 ---| '"create:time_of_day"' Wait for a time of day, then repeat at a specified interval.
 ---| '"create:fluid_threshold"' Wait for a certain amount of a specific fluid to be loaded onto the train.
@@ -25,18 +25,18 @@
 ---| '"create:unloaded"' Wait for the chunk the train is in to be unloaded.
 ---| '"create:powered"' Wait for the station to be powered with a redstone signal.
 
----@class create.train.ScheduleInstruction
----@field id create.train.InstructionId
+---@class create.types.train.ScheduleInstruction
+---@field id create.types.train.InstructionId
 ---@field data any
 
----@class create.train.ScheduleCondition
----@field id create.train.ConditionId
+---@class create.types.train.ScheduleCondition
+---@field id create.types.train.ConditionId
 ---@field data any
 
----@class create.train.ScheduleEntry
----@field instruction create.train.ScheduleInstruction
----@field conditions create.train.ScheduleCondition[][]
+---@class create.types.train.ScheduleEntry
+---@field instruction create.types.train.ScheduleInstruction
+---@field conditions create.types.train.ScheduleCondition[][]
 
----@class create.train.Schedule
+---@class create.types.train.Schedule
 ---@field cyclic boolean
----@field entries create.train.ScheduleEntry[]
+---@field entries create.types.train.ScheduleEntry[]

@@ -3,7 +3,7 @@
 ---@class create.peripheral.TrainSignal
 local TrainSignal = {
 	---Returns the train signal's currently displayed signal, as how the trains see it.
-	---@return create.train.SignalState
+	---@return create.types.train.SignalState
 	getState = function() end,
 
 	---Returns if the signal is forced red by the computer.
@@ -16,7 +16,7 @@ local TrainSignal = {
 	setForcedRed = function(forced) end,
 
 	---Gets the train signal's signal type (Normally toggled with a wrench) as how the trains see it.
-	---@return create.train.SignalType
+	---@return create.types.train.SignalType
 	getSignalType = function() end,
 
 	---Cycles through the train signal's signal types like if you used a wrench on it.

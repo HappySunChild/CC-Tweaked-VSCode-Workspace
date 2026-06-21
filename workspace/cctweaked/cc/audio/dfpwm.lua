@@ -15,45 +15,45 @@
 ---[FFmpeg](https://ffmpeg.org/) 5.1 or later.
 ---
 ---<h2 align="center"><a href="https://tweaked.cc/library/cc.audio.dfpwm.html">Official Documentation</a></h2>
-local dfpwm = {}
+local dfpwm = {
+	---Create a new encoder for converting PCM audio data into DFPWM.
+	---
+	---The returned encoder is itself a function. This function accepts a
+	---table of amplitude data between -128 and 127 and returns the encoded DFPWM data.
+	---
+	---Encoders have lots of internal state which tracks the state of the current stream.
+	---If you reuse an encoder for multiple streams, or use different encoders for the same
+	---stream, the resulting audio may not sound correct.
+	---@return fun(pcm: number[]): string encoder The encoder function.
+	make_encoder = function() end,
 
----Create a new encoder for converting PCM audio data into DFPWM.
----
----The returned encoder is itself a function. This function accepts a
----table of amplitude data between -128 and 127 and returns the encoded DFPWM data.
----
----Encoders have lots of internal state which tracks the state of the current stream.
----If you reuse an encoder for multiple streams, or use different encoders for the same
----stream, the resulting audio may not sound correct.
----@return fun(pcm: number[]): string encoder The encoder function.
-function dfpwm.make_encoder() end
+	---Create a new decoder for converting DFPWM into PCM audio data.
+	---
+	---The returned decoder is itself a function. This function accepts a
+	---string and returns a table of amplitudes, each value between -128 and 127.
+	---
+	---Decoders have lots of internal state which tracks the state of the current stream.
+	---If you reuse an decoder for multiple streams, or use different decoders for the same
+	---stream, the resulting audio may not sound correct.
+	---@return fun(dfpwm: string): number[] decoder The decoder function.
+	make_decoder = function() end,
 
----Create a new decoder for converting DFPWM into PCM audio data.
----
----The returned decoder is itself a function. This function accepts a
----string and returns a table of amplitudes, each value between -128 and 127.
----
----Decoders have lots of internal state which tracks the state of the current stream.
----If you reuse an decoder for multiple streams, or use different decoders for the same
----stream, the resulting audio may not sound correct.
----@return fun(dfpwm: string): number[] decoder The decoder function.
-function dfpwm.make_decoder() end
+	---A convenience function for encoding a complete file of audio at once.
+	---
+	---This should only be used for complete pieces of audio. If you are writing
+	---multiple chunks to the same place, you should use an encoder returned by
+	---`make_encoder` instead.
+	---@param pcm number[] The table of amplitude data.
+	---@return string encoded The encoded DFPWM data.
+	encode = function(pcm) end,
 
----A convenience function for encoding a complete file of audio at once.
----
----This should only be used for complete pieces of audio. If you are writing
----multiple chunks to the same place, you should use an encoder returned by
----`make_encoder` instead.
----@param pcm number[] The table of amplitude data.
----@return string encoded The encoded DFPWM data.
-function dfpwm.encode(pcm) end
-
----A convenience function for decoding a complete file of audio at once.
----
----This should only be used for short files. For larger files, one should read
----the file in chunks and process it using make_decoder.
----@param input string The DFPWM data to convert.
----@return number[] pcm The produced amplitude data.
-function dfpwm.decode(input) end
+	---A convenience function for decoding a complete file of audio at once.
+	---
+	---This should only be used for short files. For larger files, one should read
+	---the file in chunks and process it using make_decoder.
+	---@param input string The DFPWM data to convert.
+	---@return number[] pcm The produced amplitude data.
+	decode = function(input) end,
+}
 
 return dfpwm

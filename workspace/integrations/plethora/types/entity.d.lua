@@ -1,11 +1,11 @@
 ---@meta
 
----@class plethora.entity.FoodData
+---@class plethora.types.entity.FoodData
 ---@field hungry boolean
 ---@field saturation number
 ---@field hunger number
 
----@class plethora.entity.EntityData
+---@class plethora.types.entity.EntityData
 ---@field x number
 ---@field y number
 ---@field z number
@@ -18,7 +18,7 @@
 ---@field yaw number
 ---@field pitch number
 
----@class plethora.entity.EntityMetadata : plethora.entity.EntityData
+---@class plethora.types.entity.EntityMetadata : plethora.types.entity.EntityData
 ---@field maxHealth number
 ---@field health number
 ---@field withinBlock { x: number, y: number, z: number }
@@ -39,7 +39,7 @@
 ---@field isSneaking boolean
 ---@field armor table<string, plethora.ItemStack>
 ---@field potionEffects string[]
----@field food? plethora.entity.FoodData
+---@field food? plethora.types.entity.FoodData
 ---@field heldItem? plethora.ItemStack
 ---@field offhandItem? plethora.ItemStack
 ---@field flySpeed? number

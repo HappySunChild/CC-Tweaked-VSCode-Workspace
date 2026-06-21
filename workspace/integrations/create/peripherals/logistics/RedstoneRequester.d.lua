@@ -12,10 +12,10 @@ local RedstoneRequester = {
 	setAddress = function(address) end,
 
 	---Gets the Redstone Requester's configuration.
-	---@return create.logistics.RequestConfiguration
+	---@return create.types.logistics.RequestConfiguration
 	getConfiguration = function() end,
 	---Sets the Redstone Requester's configuration.
-	---@param configuration create.logistics.RequestConfiguration
+	---@param configuration create.types.logistics.RequestConfiguration
 	setConfiguration = function(configuration) end,
 
 	---Gets the Redstone Requester's request data.

@@ -14,7 +14,7 @@ local GeoScanner = {
 
 	---Returns a list of data about all blocks in the radius.
 	---@param radius number
-	---@return ap.info.Block[]? blocks
+	---@return ap.types.info.Block[]? blocks
 	---@return string? err_reason
 	scan = function(radius) end,
 

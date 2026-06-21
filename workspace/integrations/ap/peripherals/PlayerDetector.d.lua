@@ -6,12 +6,12 @@
 local PlayerDetector = {
 	---Returns information about the player with the specified username.
 	---@param username string
-	---@return ap.info.Player info
+	---@return ap.types.info.Player info
 	getPlayer = function(username) end,
 
 	---Returns information about the player with the specified username.
 	---@param username string
-	---@return ap.info.Player info
+	---@return ap.types.info.Player info
 	getPlayerPos = function(username) end,
 
 	---Returns a list of all online players.

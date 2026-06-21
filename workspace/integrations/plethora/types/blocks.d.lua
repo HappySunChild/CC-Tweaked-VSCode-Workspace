@@ -1,6 +1,6 @@
 ---@meta
 
----@class plethora.blocks.BlockData
+---@class plethora.types.blocks.BlockData
 ---@field x integer
 ---@field y integer
 ---@field z integer
@@ -8,7 +8,7 @@
 ---@field state table<string, any>
 ---@field metadata integer
 
----@class plethora.blocks.BlockMetadata
+---@class plethora.types.blocks.BlockMetadata
 ---@field name string
 ---@field state table<string, any>
 ---@field metadata integer

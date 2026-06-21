@@ -21,25 +21,25 @@ local Canvas2D = {
 	getSize = function() end,
 
 	---Creates a new object group.
-	---@param position plethora.common.Position2D
+	---@param position plethora.types.Position2D
 	---@return plethora.Canvas2D.Group
 	addGroup = function(position) end,
 
 	---Creates a new line loop, composed of many points.
-	---@vararg plethora.common.Position2D | number
+	---@vararg plethora.types.Position2D | number
 	---@return plethora.Canvas2D.Lines
 	addLines = function(...) end,
 
 	---Creates a new line.
-	---@param start plethora.common.Position2D
-	---@param finish plethora.common.Position2D
+	---@param start plethora.types.Position2D
+	---@param finish plethora.types.Position2D
 	---@param color? integer
 	---@param thickness? number
 	---@return plethora.Canvas2D.Line
 	addLine = function(start, finish, color, thickness) end,
 
 	---Creates a new dot.
-	---@param position plethora.common.Position2D
+	---@param position plethora.types.Position2D
 	---@param color? integer
 	---@param size? number
 	---@return plethora.Canvas2D.Dot
@@ -55,7 +55,7 @@ local Canvas2D = {
 	addRectangle = function(x, y, width, height, color) end,
 
 	---Creates a new text object.
-	---@param position plethora.common.Position2D
+	---@param position plethora.types.Position2D
 	---@param text string
 	---@param color? integer
 	---@param size? number
@@ -63,15 +63,15 @@ local Canvas2D = {
 	addText = function(position, text, color, size) end,
 
 	---Creates a new triangle.
-	---@param p1 plethora.common.Position2D
-	---@param p2 plethora.common.Position2D
-	---@param p3 plethora.common.Position2D
+	---@param p1 plethora.types.Position2D
+	---@param p2 plethora.types.Position2D
+	---@param p3 plethora.types.Position2D
 	---@param color? integer
 	---@return plethora.Canvas2D.Triangle
 	addTriangle = function(p1, p2, p3, color) end,
 
 	---Creates a item icon.
-	---@param position plethora.common.Position2D
+	---@param position plethora.types.Position2D
 	---@param item string
 	---@param damage? integer
 	---@param scale? number
@@ -79,7 +79,7 @@ local Canvas2D = {
 	addItem = function(position, item, damage, scale) end,
 
 	---Creates a new polygon, composed of many points.
-	---@vararg plethora.common.Position2D | number
+	---@vararg plethora.types.Position2D | number
 	---@return plethora.Canvas2D.Polygon
 	addPolygon = function(...) end,
 }

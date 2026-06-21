@@ -243,17 +243,17 @@ local turtle = {
 
 	---Get information about the block in front of the turtle.
 	---@return boolean exists Whether there is a block in front of the turtle.
-	---@return cc.types.BlockDetails | string info Information about the block in front, or a message explaining that there is no block.
+	---@return cc.types.blocks.BlockDetails | string info Information about the block in front, or a message explaining that there is no block.
 	inspect = function() end,
 
 	---Get information about the block above the turtle.
 	---@return boolean exists Whether there is a block in front of the turtle.
-	---@return cc.types.BlockDetails | string info Information about the block in front, or a message explaining that there is no block.
+	---@return cc.types.blocks.BlockDetails | string info Information about the block in front, or a message explaining that there is no block.
 	inspectUp = function() end,
 
 	---Get information about the block below the turtle.
 	---@return boolean exists Whether there is a block in front of the turtle.
-	---@return cc.types.BlockDetails | string info Information about the block in front, or a message explaining that there is no block.
+	---@return cc.types.blocks.BlockDetails | string info Information about the block in front, or a message explaining that there is no block.
 	inspectDown = function() end,
 
 	---Get detailed information about the items in the given slot.

@@ -14,7 +14,7 @@ local StockerTicker = {
 
 	---Requests for a package in the network with the given `address` attached.
 	---@param address string
-	---@param ... create.logistics.SurfaceFilter
+	---@param ... create.types.logistics.SurfaceFilter
 	---@return integer requested Number of items requested with the given filter.
 	requestFiltered = function(address, ...) end,
 

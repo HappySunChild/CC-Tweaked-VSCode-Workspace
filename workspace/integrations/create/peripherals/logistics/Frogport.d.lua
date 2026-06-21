@@ -13,11 +13,11 @@ local Frogport = {
 	setAddress = function(address) end,
 
 	---Gets the Frogport's configuration.
-	---@return create.logistics.PortConfiguration
+	---@return create.types.logistics.PortConfiguration
 	getConfiguration = function() end,
 
 	---Sets the Frogport's configuration.
-	---@param configuration create.logistics.PortConfiguration
+	---@param configuration create.types.logistics.PortConfiguration
 	setConfiguration = function(configuration) end,
 
 	---Get detailed information about an item in the Frogport's inventory.

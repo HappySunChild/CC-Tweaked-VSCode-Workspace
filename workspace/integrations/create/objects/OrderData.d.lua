@@ -21,7 +21,7 @@
 ---@class create.OrderData
 local OrderData = {
 	---Gets the crafting recipes associated with the order.
-	---@return create.logistics.Craft[]
+	---@return create.types.logistics.Craft[]
 	getCrafts = function() end,
 
 	---Gets the index of the package.
