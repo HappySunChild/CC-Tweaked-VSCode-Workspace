@@ -59,8 +59,8 @@ local io = {
 	---Once the end of the file has been reached, nil will be returned. The file is automatically closed.
 	---If no file name is given, the current input will be used instead. In this case, the handle is not used.
 	---@param filename string The name of the file to extract lines from.
-	---@param ReadFormat cc.types.io.ReadFormat The formats to use.
-	lines = function(filename, ReadFormat) end,
+	---@param ... cc.types.io.ReadFormat The formats to use.
+	lines = function(filename, ...) end,
 
 	---Open a file with the given mode, either returning a new file handle or nil, plus an error message.
 	---@param path string The name of the file to open.
